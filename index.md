@@ -6,7 +6,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+A Senior Cloud & DevOps Engineer with extensive 11 years of experience working in ITIL environments, holding double master’s degree in Networks along with 2x AWS Certified Solution Architect and Security Speciality, CCNA Routing and Switching & PRINCE2® - Project Management certificates with a primary focus on DevSecOps, AWS and Azure Cloud, VMware Virtualisation, Kubernetes, CICD, server infrastructure (windows, Linux, Unix), and Cisco networking.
 
 ```markdown
 Syntax highlighted code block
