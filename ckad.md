@@ -1,39 +1,21 @@
-## Deploy NodeJs App to Kubernetes with helm
+## CKAD exercise Scenarios and Answers
 
-in this Article we will try to instruct you how to build, publish nodejs app to docker registery and then deploy the built image of nodejs app to minikube with helm. 
-
-
-### Markdown
+These are the core concept scenarios and answers for CKAD exam.  
 
 
-
-```markdown
-- 
-
-
-```
-
-![](https://gaforgithub.azurewebsites.net/api?repo=CKAD-exercises/core_concepts&empty)
 # Core Concepts (13%)
 
-kubernetes.io > Documentation > Reference > kubectl CLI > [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
-kubernetes.io > Documentation > Tasks > Monitoring, Logging, and Debugging > [Get a Shell to a Running Container](https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/)
 
-kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Configure Access to Multiple Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
-
-kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Accessing Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/) using API
-
-kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Use Port Forwarding to Access Applications in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
-
-### Create a namespace called 'mynamespace' and a pod with image nginx called nginx on this namespace
+### Q/Create a namespace called 'mynamespace' and a pod with image nginx called nginx on this namespace
 ```markdown
 kubectl create namespace mynamespace
 kubectl run nginx --image=nginx --restart=Never -n mynamespace
 
 ```
 
-### Create the pod that was just described using YAML
+
+### Q/Create the pod that was just described using YAML
 Easily generate YAML with:
 
 ```bash
@@ -75,7 +57,7 @@ kubectl run nginx --image=nginx --restart=Never --dry-run=client -o yaml | kubec
 ```
 
 
-### Create a busybox pod (using kubectl command) that runs the command "env". Run it and see the output
+### Q/Create a busybox pod (using kubectl command) that runs the command "env". Run it and see the output
 ```bash
 kubectl run busybox --image=busybox --command --restart=Never -it -- env # -it will help in seeing the output
 # or, just run it without -it
@@ -84,7 +66,8 @@ kubectl run busybox --image=busybox --command --restart=Never -- env
 kubectl logs busybox
 ```
 
-### Create a busybox pod (using YAML) that runs the command "env". Run it and see the output
+
+### Q/Create a busybox pod (using YAML) that runs the command "env". Run it and see the output
 ```bash
 # create a  YAML template with this command
 kubectl run busybox --image=busybox --restart=Never --dry-run=client -o yaml --command -- env > envpod.yaml
@@ -118,17 +101,20 @@ kubectl apply -f envpod.yaml
 kubectl logs busybox
 ```
 
-### Get the YAML for a new namespace called 'myns' without creating it
+
+### Q/Get the YAML for a new namespace called 'myns' without creating it
 ```bash
 kubectl create namespace myns -o yaml --dry-run=client
 ```
 
-### Get the YAML for a new ResourceQuota called 'myrq' with hard limits of 1 CPU, 1G memory and 2 pods without creating it
+
+### Q/Get the YAML for a new ResourceQuota called 'myrq' with hard limits of 1 CPU, 1G memory and 2 pods without creating it
 ```bash
 kubectl create quota myrq --hard=cpu=1,memory=1G,pods=2 --dry-run=client -o yaml
 ```
 
-### Get pods on all namespaces
+
+### Q/Get pods on all namespaces
 ```bash
 kubectl get po --all-namespaces
 ```
@@ -138,13 +124,14 @@ Alternatively
 kubectl get po -A
 ```
 
-### Create a pod with image nginx called nginx and expose traffic on port 80
+
+### Q/Create a pod with image nginx called nginx and expose traffic on port 80
 ```bash
 kubectl run nginx --image=nginx --restart=Never --port=80
 ```
 
-### Change pod's image to nginx:1.7.1. Observe that the container will be restarted as soon as the image gets pulled
 
+### Q/Change pod's image to nginx:1.7.1. Observe that the container will be restarted as soon as the image gets pulled
 *Note*: The `RESTARTS` column should contain 0 initially (ideally - it could be any number)
 
 ```bash
@@ -175,8 +162,7 @@ kubectl get po nginx -o jsonpath='{.spec.containers[].image}{"\n"}'
 ```
 
 
-### Get nginx pod's ip created in previous step, use a temp busybox image to wget its '/'
-
+### Q/Get nginx pod's ip created in previous step, use a temp busybox image to wget its '/'
 ```bash
 kubectl get po -o wide # get the IP, will be something like '10.1.1.131'
 # create a temp busybox pod
@@ -184,7 +170,6 @@ kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- 10.1.1.
 ```
 
 Alternatively you can also try a more advanced option:
-
 ```bash
 # Get IP of the nginx pod
 NGINX_IP=$(kubectl get pod nginx -o jsonpath='{.status.podIP}')
@@ -193,13 +178,11 @@ kubectl run busybox --image=busybox --env="NGINX_IP=$NGINX_IP" --rm -it --restar
 ``` 
 
 Or just in one line:
-
 ```bash
 kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- $(kubectl get pod nginx -o jsonpath='{.status.podIP}:{.spec.containers[0].ports[0].containerPort}')
 ```
 
 ### Get pod's YAML
-
 ```bash
 kubectl get po nginx -o yaml
 # or
@@ -210,42 +193,48 @@ kubectl get po nginx --output yaml
 kubectl get po nginx --output=yaml
 ```
 
-### Get information about the pod, including details about potential issues (e.g. pod hasn't started)
+
+### Q/Get information about the pod, including details about potential issues (e.g. pod hasn't started)
 ```bash
 kubectl describe po nginx
 ```
 
-### Get pod logs
+
+### Q/Get pod logs
 ```bash
 kubectl logs nginx
 ```
 
-### If pod crashed and restarted, get logs about the previous instance
+
+### Q/If pod crashed and restarted, get logs about the previous instance
 ```bash
 kubectl logs nginx -p
 # or
 kubectl logs nginx --previous
 ```
 
-### Execute a simple shell on the nginx pod
+
+### Q/ Execute a simple shell on the nginx pod
 ```bash
 kubectl exec -it nginx -- /bin/sh
 ```
 
-### Create a busybox pod that echoes 'hello world' and then exits
+
+### Q/ Create a busybox pod that echoes 'hello world' and then exits
 ```bash
 kubectl run busybox --image=busybox -it --restart=Never -- echo 'hello world'
 # or
 kubectl run busybox --image=busybox -it --restart=Never -- /bin/sh -c 'echo hello world'
 ```
 
-### Do the same, but have the pod deleted automatically when it's completed
+
+### Q/ Do the same, but have the pod deleted automatically when it's completed
 ```bash
 kubectl run busybox --image=busybox -it --rm --restart=Never -- /bin/sh -c 'echo hello world'
 kubectl get po # nowhere to be found :)
 ```
 
-### Create an nginx pod and set an env value as 'var1=val1'. Check the env value existence within the pod
+### Q/ Create an nginx pod and set an env value as 'var1=val1'. Check the env value existence within the pod
 ```bash
 kubectl run nginx --image=nginx --restart=Never --env=var1=val1
 # then
@@ -257,3 +246,17 @@ kubectl describe po nginx | grep val1
 # or
 kubectl run nginx --restart=Never --image=nginx --env=var1=val1 -it --rm -- env
 ```
+
+
+![](https://gaforgithub.azurewebsites.net/api?repo=CKAD-exercises/core_concepts&empty)
+# Core Concepts (13%)
+
+kubernetes.io > Documentation > Reference > kubectl CLI > [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+kubernetes.io > Documentation > Tasks > Monitoring, Logging, and Debugging > [Get a Shell to a Running Container](https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/)
+
+kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Configure Access to Multiple Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
+
+kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Accessing Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/) using API
+
+kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Use Port Forwarding to Access Applications in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
