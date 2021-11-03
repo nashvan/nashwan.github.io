@@ -43,7 +43,7 @@ kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Use 
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl create namespace mynamespace
 kubectl run nginx --image=nginx --restart=Never -n mynamespace
 ```
@@ -58,11 +58,11 @@ kubectl run nginx --image=nginx --restart=Never -n mynamespace
 
 Easily generate YAML with:
 
-```markdown
+```bash
 kubectl run nginx --image=nginx --restart=Never --dry-run=client -n mynamespace -o yaml > pod.yaml
 ```
 
-```markdown
+```bash
 cat pod.yaml
 ```
 
@@ -86,13 +86,13 @@ spec:
 status: {}
 ```
 
-```markdown
+```bash
 kubectl create -f pod.yaml
 ```
 
 Alternatively, you can run in one line
 
-```markdown
+```bash
 kubectl run nginx --image=nginx --restart=Never --dry-run=client -o yaml | kubectl create -n mynamespace -f -
 ```
 
@@ -104,7 +104,7 @@ kubectl run nginx --image=nginx --restart=Never --dry-run=client -o yaml | kubec
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl run busybox --image=busybox --command --restart=Never -it -- env # -it will help in seeing the output
 # or, just run it without -it
 kubectl run busybox --image=busybox --command --restart=Never -- env
@@ -120,7 +120,7 @@ kubectl logs busybox
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 # create a  YAML template with this command
 kubectl run busybox --image=busybox --restart=Never --dry-run=client -o yaml --command -- env > envpod.yaml
 # see it
@@ -147,7 +147,7 @@ spec:
 status: {}
 ```
 
-```markdown
+```bash
 # apply it and then see the logs
 kubectl apply -f envpod.yaml
 kubectl logs busybox
@@ -161,7 +161,7 @@ kubectl logs busybox
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl create namespace myns -o yaml --dry-run=client
 ```
 
@@ -173,7 +173,7 @@ kubectl create namespace myns -o yaml --dry-run=client
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl create quota myrq --hard=cpu=1,memory=1G,pods=2 --dry-run=client -o yaml
 ```
 
@@ -185,12 +185,12 @@ kubectl create quota myrq --hard=cpu=1,memory=1G,pods=2 --dry-run=client -o yaml
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl get po --all-namespaces
 ```
 Alternatively 
 
-```markdown
+```bash
 kubectl get po -A
 ```
 </p>
@@ -201,7 +201,7 @@ kubectl get po -A
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl run nginx --image=nginx --restart=Never --port=80
 ```
 
@@ -215,7 +215,7 @@ kubectl run nginx --image=nginx --restart=Never --port=80
 
 *Note*: The `RESTARTS` column should contain 0 initially (ideally - it could be any number)
 
-```markdown
+```bash
 # kubectl set image POD/POD_NAME CONTAINER_NAME=IMAGE_NAME:TAG
 kubectl set image pod/nginx nginx=nginx:1.7.1
 kubectl describe po nginx # you will see an event 'Container will be killed and recreated'
@@ -238,7 +238,7 @@ Events:
 
 *Note*: you can check pod's image by running
 
-```markdown
+```bash
 kubectl get po nginx -o jsonpath='{.spec.containers[].image}{"\n"}'
 ```
 
@@ -250,7 +250,7 @@ kubectl get po nginx -o jsonpath='{.spec.containers[].image}{"\n"}'
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl get po -o wide # get the IP, will be something like '10.1.1.131'
 # create a temp busybox pod
 kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- 10.1.1.131:80
@@ -258,7 +258,7 @@ kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- 10.1.1.
 
 Alternatively you can also try a more advanced option:
 
-```markdown
+```bash
 # Get IP of the nginx pod
 NGINX_IP=$(kubectl get pod nginx -o jsonpath='{.status.podIP}')
 # create a temp busybox pod
@@ -267,7 +267,7 @@ kubectl run busybox --image=busybox --env="NGINX_IP=$NGINX_IP" --rm -it --restar
 
 Or just in one line:
 
-```markdown
+```bash
 kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- $(kubectl get pod nginx -o jsonpath='{.status.podIP}:{.spec.containers[0].ports[0].containerPort}')
 ```
 
@@ -279,7 +279,7 @@ kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- $(kubec
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl get po nginx -o yaml
 # or
 kubectl get po nginx -oyaml
@@ -297,7 +297,7 @@ kubectl get po nginx --output=yaml
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl describe po nginx
 ```
 
@@ -309,7 +309,7 @@ kubectl describe po nginx
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl logs nginx
 ```
 
@@ -321,7 +321,7 @@ kubectl logs nginx
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl logs nginx -p
 # or
 kubectl logs nginx --previous
@@ -335,7 +335,7 @@ kubectl logs nginx --previous
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl exec -it nginx -- /bin/sh
 ```
 
@@ -347,7 +347,7 @@ kubectl exec -it nginx -- /bin/sh
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl run busybox --image=busybox -it --restart=Never -- echo 'hello world'
 # or
 kubectl run busybox --image=busybox -it --restart=Never -- /bin/sh -c 'echo hello world'
@@ -361,7 +361,7 @@ kubectl run busybox --image=busybox -it --restart=Never -- /bin/sh -c 'echo hell
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl run busybox --image=busybox -it --rm --restart=Never -- /bin/sh -c 'echo hello world'
 kubectl get po # nowhere to be found :)
 ```
@@ -374,7 +374,7 @@ kubectl get po # nowhere to be found :)
 <details><summary>show</summary>
 <p>
 
-```markdown
+```bash
 kubectl run nginx --image=nginx --restart=Never --env=var1=val1
 # then
 kubectl exec -it nginx -- env
