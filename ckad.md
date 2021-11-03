@@ -8,21 +8,9 @@ in this Article we will try to instruct you how to build, publish nodejs app to 
 
 
 ```markdown
-Syntax highlighted code block
+- 
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 ![](https://gaforgithub.azurewebsites.net/api?repo=CKAD-exercises/core_concepts&empty)
@@ -43,10 +31,12 @@ kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Use 
 <details><summary>show</summary>
 <p>
 
-```bash
+```markdown
 kubectl create namespace mynamespace
 kubectl run nginx --image=nginx --restart=Never -n mynamespace
+
 ```
+
 
 </p>
 </details>
