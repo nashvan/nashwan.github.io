@@ -28,9 +28,6 @@ kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Use 
 
 ### Create a namespace called 'mynamespace' and a pod with image nginx called nginx on this namespace
 
-<details><summary>show</summary>
-<p>
-
 ```markdown
 kubectl create namespace mynamespace
 kubectl run nginx --image=nginx --restart=Never -n mynamespace
