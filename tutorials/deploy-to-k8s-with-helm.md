@@ -96,7 +96,7 @@ MyApp Web API listening on port 8080
 ```
 
 Then on a separate terminal run
-curl http://localhost:8080
+`curl http://localhost:8080`
 
 # Build and Publish image
 So far so good, now lets wrap this small applciation into a Dockerfile.
