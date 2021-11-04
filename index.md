@@ -6,11 +6,10 @@
 
 A Senior Cloud & DevOps Engineer with extensive 11 years of experience working in ITIL environments, holding double master’s degree in Networks along with 2x AWS Certified Solution Architect and Security Speciality, CCNA Routing and Switching & PRINCE2® - Project Management certificates with a primary focus on DevSecOps, AWS and Azure Cloud, VMware Virtualisation, Kubernetes, CICD, server infrastructure (windows, Linux, Unix), and Cisco networking.
 
-You can use the [editor on GitHub](https://github.com/nashvan/nashwan.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 ## Contents of github space
 
-- [Deploy to K8s with Helm](https://nashvan.github.io/ckad/ckad_core_concepts)
+- [Deploy NodeJs App to K8s with Helm](https://nashvan.github.io/ckad/ckad_core_concepts)
 - [CKAD Exam Prep](https://nashvan.github.io/ckad)
 - [Pod design - 20%](https://nashvan.github.io/ckad/pod_design)
 - [Configuration - 18%](https://nashvan.github.io/ckad/configuration)
