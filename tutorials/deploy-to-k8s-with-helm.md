@@ -350,13 +350,19 @@ make delete
 
 # Show the URL of your Service
 make run
-
 ```
 
 
+# Conclusions
+In this article I’ve tried to present how, with Helm, you can deploy an application to kubernetes and reducing maintenance overhead and minimise a big amount of copy-pasting tasks and can bring a one single template for deploying multiple applications on a Kubernetes cluster, which might be very handy in a microservice world. I hope you’ve learnt something new and enjoyed it.
+
+In order to deploy each application we still need to run imperative commands, like helm install.
+But there is still one thing left, which holds us from establishing a fully declarative approach for an infrastructure. and that can be done with Helmfile approach which we havent covered that in this article. 
+
+
+
+
 ### Markdown
-
-
 ```markdown
 Syntax highlighted code block
 - Bulleted
