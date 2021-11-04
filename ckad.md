@@ -11,12 +11,12 @@ During the exam, you are allowed to keep only one other browser tab open to refe
 ## Contents
 
 - [Core Concepts - 13%](https://nashvan.github.io/ckad/ckad_core_concepts)
-- [Multi-container pods - 10%](b.multi_container_pods.md)
-- [Pod design - 20%](c.pod_design.md)
-- [Configuration - 18%](d.configuration.md)
-- [Observability - 18%](e.observability.md)
-- [Services and networking - 13%](f.services.md)
-- [State persistence - 8%](g.state.md)
+- [Multi-container pods - 10%](https://nashvan.github.io/ckad/multi_container_pod)
+- [Pod design - 20%](https://nashvan.github.io/ckad/multi_container_pod)
+- [Configuration - 18%](https://nashvan.github.io/ckad/multi_container_pod)
+- [Observability - 18%](https://nashvan.github.io/ckad/multi_container_pod)
+- [Services and networking - 13%](https://nashvan.github.io/ckad/multi_container_pod)
+- [State persistence - 8%](https://nashvan.github.io/ckad/multi_container_pod)
 
 
 ### Can I PR? There is an error/an alternative way/an extra question/solution I can offer
