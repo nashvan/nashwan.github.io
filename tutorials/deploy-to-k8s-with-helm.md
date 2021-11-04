@@ -167,8 +167,8 @@ But Helm is not only providing some predefined blueprints, you can create your o
 It’s very easy and can be done by a single command helm create <chart-name> , which creates a folder with a basic structure:
 
 ```bash
-helm create example
-Creating example
+helm create myapp
+Creating myapp
 ```
 
 In the templates/ folder there are Helm templates that with combination of values.yaml will result in set of Kubernetes objects.
@@ -243,7 +243,7 @@ In helm chart template folder we need the following templates:
 - service.yaml
 
 Lets now check the deployment template:
-```YAML
+```bash
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -308,7 +308,7 @@ spec:
 
 At first glance you might see these strange parts between two pairs of curly brackets, like `image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"` . They are written in Go template language and are referring to a value located in a `values.yaml` which is located inside the root folder of a chart. For mentioned example Helm will try to match it with a value from `values.yaml`:
 
-```YAML
+```bash
 image:
   repository: nashvan/myapp
   tag: 1.0.0
@@ -316,7 +316,7 @@ image:
 ```
 
 Another example of that is   `containerPort: {{ .Values.service.port }}` which referes to a value located in `values.yaml`:
-```YAML
+```bash
 service:
   port: 8080
 ```
@@ -325,7 +325,7 @@ And so on. We can define the structure inside this file whatever we like.
 
 
 Next thing we do service.yaml template
-```YAML
+```bash
 apiVersion: v1
 kind: Service
 metadata:
@@ -345,7 +345,7 @@ spec:
 ```
 
  Finally, we configure ConfigMap template in config.yaml
-```YAML
+```bash
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -359,7 +359,7 @@ data:
 ```
 
 Here you might see a strange {{ -range ... }} clause, which can be translated as a for each loop known in any programming language. In above example, Helm template will try to inject values from an array defined in values.yaml:
-```YAML
+```bash
 env:
   config:
     version: 1.0.0
@@ -373,7 +373,7 @@ env:
 ```
 
 The entire `value.yaml` will look like below:
-```YAML
+```bash
 replicaCount: 1
 env:
   config:
