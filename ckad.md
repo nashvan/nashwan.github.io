@@ -12,8 +12,8 @@ During the exam, you are allowed to keep only one other browser tab open to refe
 
 - [Core Concepts - 13%](https://nashvan.github.io/ckad/ckad_core_concepts)
 - [Multi-container pods - 10%](https://nashvan.github.io/ckad/multi_container_pod)
-- [Pod design - 20%](https://nashvan.github.io/ckad/multi_container_pod)
-- [Configuration - 18%](https://nashvan.github.io/ckad/multi_container_pod)
+- [Pod design - 20%](https://nashvan.github.io/ckad/pod_design)
+- [Configuration - 18%](https://nashvan.github.io/ckad/configuration)
 - [Observability - 18%](https://nashvan.github.io/ckad/multi_container_pod)
 - [Services and networking - 13%](https://nashvan.github.io/ckad/multi_container_pod)
 - [State persistence - 8%](https://nashvan.github.io/ckad/multi_container_pod)
