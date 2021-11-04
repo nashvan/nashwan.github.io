@@ -14,6 +14,10 @@ Please make sure you have the following installed for your environment to be rea
 Now lets start writing a simple nodejs api application for our tutorial test.
 
 First, let’s create a new main folder to add our source codes. I will name this `myapp` and inside that let’s create another folder for nodejs application code name it as `src`.
+```bash
+mkdir -p myapp/src
+cd myapp/src
+```
 
 # NodeJS app
 From the terminal navigate to myapp/src folder and run:
