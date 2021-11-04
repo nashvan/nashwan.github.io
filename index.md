@@ -1,6 +1,6 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Author Nashwan](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![unofficial Google Analytics for GitHub](https://gaforgithub.azurewebsites.net/api?repo=CKAD-exercises)](https://nashvan.github.io/ckad)
+[![CertBadges](https://img.shields.io/badge/CertBadges-ACSA,SCS,CCNA,ITIL,PRINCE2-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Welcome to my GitHub Pages
 
