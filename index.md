@@ -17,7 +17,7 @@ Experience across technologies including but not limited to:
 - Network Security: Cisco ASA Firewall, Cisco FirePower, Checkpoints, Nginx proxy.
 
 
-## Contents of github space
+## Contents and Topics
 
 - [Deploy NodeJs App to K8s with Helm](https://nashvan.github.io/ckad/ckad_core_concepts)
 - [CKAD Exam Prep](https://nashvan.github.io/ckad)
