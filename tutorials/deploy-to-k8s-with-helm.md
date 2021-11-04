@@ -10,6 +10,139 @@ Please make sure you have the following installed for your environment to be rea
 - Kubernetes command line tool — kubectl
 - Helm (v3).
 
+
+Now lets start writing a simple nodejs api application for our tutorial test.
+
+First, let’s create a new main folder to add our source codes. I will name this `myapp` and inside that let’s create another folder for nodejs application code name it as `src`.
+
+# NodeJS app
+From the terminal navigate to myapp/src folder and run:
+```bash
+npm init -y # Generate package.json
+npm i express # Install express
+touch index.js # Create a new index.js file
+```
+
+Now lets write a simple nodejs code for our application inside index.js
+```js
+// // Node Modules
+const fs = require('fs');
+const http = require('http');
+const url = require('url');
+
+const git = require("git-rev-sync");
+// const git_commit_sha = (git.short());
+const git_commit_sha = process.env.GIT_SHA || (git.short());
+const port = 8080;
+const log_level = "INFO";
+
+// const git_commit_sha = `git rev-parse --short HEAD`
+
+const info = {
+    service_name: "myapplication",
+    version: "1.0.0",
+    git_commit_sha: `${git_commit_sha}`,
+    environment: {
+        service_port: `${port}`,
+        log_level: `${log_level}`,
+    }
+}
+
+const jsonString = JSON.stringify(info, null, 2);
+fs.writeFileSync('./dev-data/data.json', jsonString)
+console.log('Successfully wrote file');
+
+// // it reads the file, and parse it into data
+const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8');
+const dataObj = JSON.parse(data);
+const server = http.createServer((req, res) => {
+    const { query, pathname } = (url.parse(req.url, true));
+
+    // info page
+    if (pathname === '/info') {
+        res.writeHead(200, { 'Content-type': 'application/json'});
+        res.end(data);
+
+    // Not Found
+
+    } else {
+        res.writeHead(404, {
+            'Content-type': 'text/html',
+            'my-own-header': 'hello-world'
+        });
+        res.end('<h1>Page not found!</h1>');
+    }
+});
+
+server.listen(8080, () => {
+    // console.log('Server listening on port 8080')
+    process.stdout.write("MyApp Web API listening on port 8080\n");
+})
+```
+
+In the package.json file, under the scripts object, add the following.
+```json
+"scripts": {
+    "start": "node index.js"
+ }
+```
+
+Now let’s run the server to check if our app works as intended. Type
+npm start and you should get the following log.
+```bash
+npm start
+Successfully wrote file
+MyApp Web API listening on port 8080
+```
+
+Then on a separate terminal run
+curl http://localhost:8080
+
+So far so good, now lets wrap this small applciation into a Dockerfile. 
+```Dockerfile
+FROM node:14
+
+# Create app directory
+WORKDIR /usr/src/app
+
+ARG GIT_SHA=""
+LABEL git_sha=${GIT_SHA}
+ENV GIT_SHA=${GIT_SHA}
+
+RUN npm config set strict-ssl true
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+ 
+# Bundle app source
+COPY index.js .
+RUN mkdir dev-data
+
+EXPOSE 8080
+CMD [ "node", "./index.js" ]
+```
+
+Now, lets build the docker image for this nodejs app and run the image as container:
+```bash
+cd src/
+docker build --build-arg=GIT_SHA=$(git rev-parse --short HEAD) -t nashvan/myanzapp .
+
+docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
+nashvan/myapp                 latest    de4c6d54f34c   33 minutes ago   980MB
+
+docker run -i -p 5000:8080 de4c6d54f34c
+
+# tag image and publish it to dockerhub repo
+docker tag nashvan/myapp:latest nashvan/myapp:1.0.0
+docker push nashvan/myapp:1.0.0
+```
+Exellent, so now we have the image build and pushed to dockerhub. 
+
+
+
+# Deploy nodejs Application to minikube with helm
 There are couple approaches how to work with Helm. One of them is to download publicly available charts from the Helm Hub. They are prepared by community and are free to use.
 
 For instance, if we would like to run Nginx-ingress on a cluster, it’s described on this page — https://artifacthub.io/packages/helm/nginx/nginx-ingress — with the following commands:
