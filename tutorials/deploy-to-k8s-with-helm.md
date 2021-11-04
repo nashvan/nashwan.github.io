@@ -337,19 +337,19 @@ run:
 Now we run the following Make command to deploy, delete or update our releases.
 ```bash
 # Show the plan what would be deployed
-Make plan
+make plan
 
 # Deploy your application
-Make deploy
+make deploy
 
 # Update the release or deployment of your application
-Make update
+make update
 
 # Delete the release
-Make delete
+make delete
 
 # Show the URL of your Service
-Make run
+make run
 
 ```
 
