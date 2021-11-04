@@ -1,36 +1,31 @@
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Author Nashwan](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![unofficial Google Analytics for GitHub](https://gaforgithub.azurewebsites.net/api?repo=CKAD-exercises)](https://nashvan.github.io/ckad)
+
 ## Welcome to my GitHub Pages
 
 A Senior Cloud & DevOps Engineer with extensive 11 years of experience working in ITIL environments, holding double master’s degree in Networks along with 2x AWS Certified Solution Architect and Security Speciality, CCNA Routing and Switching & PRINCE2® - Project Management certificates with a primary focus on DevSecOps, AWS and Azure Cloud, VMware Virtualisation, Kubernetes, CICD, server infrastructure (windows, Linux, Unix), and Cisco networking.
 
 You can use the [editor on GitHub](https://github.com/nashvan/nashwan.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-### Markdown
+## Contents of github space
 
+- [Deploy to K8s with Helm](https://nashvan.github.io/ckad/ckad_core_concepts)
+- [CKAD Exam Prep](https://nashvan.github.io/ckad)
+- [Pod design - 20%](https://nashvan.github.io/ckad/pod_design)
+- [Configuration - 18%](https://nashvan.github.io/ckad/configuration)
+- [Observability - 18%](https://nashvan.github.io/ckad/observability)
+- [Services and networking - 13%](https://nashvan.github.io/ckad/services_and_networking)
+- [State persistence - 8%](https://nashvan.github.io/ckad/state_persistence)
 
+## CKAD Exam Practice with Katakode
+- [Practice CKAD Exam with Katakode](https://www.katacoda.com/fabito/scenarios/ckad)
+- [CKAD Practice Challenge](https://www.katacoda.com/liptanbiswas/courses/ckad-practice-challenges)
 
-```markdown
-Syntax highlighted code block
+### Can I PR? There is an error/an alternative way/an extra question/solution I can offer
 
-# Header 1
-## Header 2
-### Header 3
+Absolutely! Feel free to PR and edit/add questions and solutions, but please stick to the existing format.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nashvan/nashwan.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
