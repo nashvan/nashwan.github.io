@@ -1,6 +1,6 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![unofficial Google Analytics for GitHub](https://gaforgithub.azurewebsites.net/api?repo=CKAD-exercises)](https://nashvan.github.io/ckad)
+[![Author Nashwan](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![CertBadges](https://img.shields.io/badge/CertBadges-ACSA,SCS,CCNA,ITIL,PRINCE2-brightgreen.svg?style=flat-square)](https://www.linkedin.com/in/nashwan-mustafa/)
 
 # CKAD Exercises
 
