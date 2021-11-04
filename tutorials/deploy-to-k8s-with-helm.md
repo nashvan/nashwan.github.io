@@ -102,6 +102,256 @@ helm create myapp
 Creating myapp
 ```
 
+In helm chart template folder we need the following templates:
+- config.yaml
+- deployment.yaml
+- service.yaml
+
+Lets now check the deployment template:
+```YAML
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "myapp.fullname" . }}
+  labels:
+    {{- include "myapp.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "myapp.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "myapp.selectorLabels" . | nindent 8 }}
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      serviceAccountName: {{ include "myapp.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: {{ .Values.service.protocol }}
+          livenessProbe:
+            httpGet:
+              path: /info
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /info
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+
+          envFrom:
+            - configMapRef:
+                name: {{ include "myapp.fullname" . }}
+
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+```
+
+At first glance you might see these strange parts between two pairs of curly brackets, like `image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"` . They are written in Go template language and are referring to a value located in a `values.yaml` which is located inside the root folder of a chart. For mentioned example Helm will try to match it with a value from `values.yaml`:
+
+```YAML
+image:
+  repository: nashvan/myapp
+  tag: 1.0.0
+  pullPolicy: IfNotPresent
+```
+
+Another example of that is   `containerPort: {{ .Values.service.port }}` which referes to a value located in `values.yaml`:
+```YAML
+service:
+  port: 8080
+```
+
+And so on. We can define the structure inside this file whatever we like.
+
+
+Next thing we do service.yaml template
+```YAML
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "myapp.fullname" . }}
+  labels:
+    {{- include "myapp.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: {{ .Values.service.protocol }}
+      name: {{ .Values.service.name }}
+  selector:
+    {{- include "myapp.selectorLabels" . | nindent 4 }}
+
+```
+
+ Finally, we configure ConfigMap template in config.yaml
+```YAML
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "myapp.fullname" . }}
+  labels:
+    {{- include "myapp.labels" . | nindent 4 }}
+data: 
+  {{- range $key, $val := .Values.env.config }}
+    {{ $key }}: {{ $val | quote}}
+  {{- end}}
+```
+
+Here you might see a strange {{ -range ... }} clause, which can be translated as a for each loop known in any programming language. In above example, Helm template will try to inject values from an array defined in values.yaml:
+```YAML
+env:
+  config:
+    version: 1.0.0
+    GIT_SHA: abc858a
+    log_level: INFO
+    service_port: 8080
+  secret:
+    variable4: value4
+    variable5: value5
+    variable6: value6
+```
+
+The entire `value.yaml` will look like below:
+```YAML
+replicaCount: 1
+env:
+  config:
+    version: 1.0.0
+    GIT_SHA: abc858a
+    log_level: INFO
+    service_port: 8080
+  secret:
+    variable4: value4
+    variable5: value5
+    variable6: value6
+image:
+  repository: nashvan/myapp
+  tag: 1.0.0
+  pullPolicy: IfNotPresent
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+serviceAccount:
+  create: true
+  name:
+podSecurityContext: {}
+securityContext: {}
+service:
+  type: NodePort
+  protocol: TCP
+  port: 8080
+  targetPort: 8080
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: nashwan-mustafa.local
+      paths: []
+  tls: []
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+```
+
+Now, in order to create | upadte | delete release for our application, create the following make file, then we use Make to :
+```bash
+GIT_SHA=$(shell git rev-parse --short HEAD)
+USER=nashvan
+RELEASE_TAG=1.0.0
+HELM_REPO=https://nashvan.github.io/myapp-helm-chart/
+RELEASE_NAME=dev
+
+build:
+	@echo Building container
+	docker build --build-arg=GIT_SHA=$(git rev-parse --short HEAD) -t myapp .
+
+push:
+	docker tag $(USER)/myapp:latest $(CI_USER)/myapp:$(RELEASE_TAG) 
+	docker push $(USER)/myapp:$(RELEASE_TAG)
+
+plan:
+	@echo plan Helm chart 
+	helm install --dry-run $(RELEASE_NAME) helm/myapp --set env.config.GIT_SHA=$(GIT_SHA)
+
+deploy:
+	@echo Installing Helm chart 
+	helm install $(RELEASE_NAME) helm/myapp --set env.config.GIT_SHA=$(GIT_SHA)
+
+replan:
+	@echo plan Helm chart 
+	helm upgrade --dry-run dev helm/myapp --set env.config.GIT_SHA=$(GIT_SHA)
+
+update:
+	@echo Installing Helm chart 
+	helm upgrade $(RELEASE_NAME) helm/myapp --set env.config.GIT_SHA=$(GIT_SHA)
+
+list:
+	@echo list deployed Helm charts
+	helm list
+
+delete:
+	@echo Uninstalling Helm chart 
+	helm uninstall $(RELEASE_NAME)
+
+kg:
+	@echo display kubernetes resources deployed with Helm chart 
+	kubectl get svc,deploy,configmap
+
+kd:
+	@echo describe pod details 
+	kubectl describe po
+
+run:
+	@echo get minikube service url
+	minikube service dev-myapp --url
+```
+
+Now we run the following Make command to deploy, delete or update our releases.
+```bash
+# Show the plan what would be deployed
+Make plan
+
+# Deploy your application
+Make deploy
+
+# Update the release or deployment of your application
+Make update
+
+# Delete the release
+Make delete
+
+# Show the URL of your Service
+Make run
+
+```
 
 
 ### Markdown
