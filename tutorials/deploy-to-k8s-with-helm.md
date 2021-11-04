@@ -362,20 +362,4 @@ But there is still one thing left, which holds us from establishing a fully decl
 
 
 
-### Markdown
-```markdown
-Syntax highlighted code block
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-
 For more articles see [My Github Page](https://nashvan.github.io).
-
