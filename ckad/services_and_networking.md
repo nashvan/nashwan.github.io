@@ -19,10 +19,7 @@ kubectl run busybox --rm --image=busybox -it --restart=Never -- sh
 wget -O- IP:80
 exit
 ```
-
-</p>
 or
-<p>
 
 ```bash
 IP=$(kubectl get svc nginx --template={{.spec.clusterIP}}) # get the IP (something like 10.108.93.130)
