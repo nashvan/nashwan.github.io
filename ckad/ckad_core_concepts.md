@@ -1,10 +1,4 @@
-## CKAD exercise Scenarios and Answers
-
-These are the core concept scenarios and answers for CKAD exam.  
-
-
 # Core Concepts (13%)
-
 
 
 ### Q/Create a namespace called 'mynamespace' and a pod with image nginx called nginx on this namespace
