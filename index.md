@@ -21,11 +21,7 @@ A Senior Cloud & DevOps Engineer with extensive 11 years of experience working i
 - [Practice CKAD Exam with Katakode](https://www.katacoda.com/fabito/scenarios/ckad)
 - [CKAD Practice Challenge](https://www.katacoda.com/liptanbiswas/courses/ckad-practice-challenges)
 
-### Can I PR? There is an error/an alternative way/an extra question/solution I can offer
-
-Absolutely! Feel free to PR and edit/add questions and solutions, but please stick to the existing format.
-
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages? [contact support](https://nashvan.github.io/contact) and we’ll help you sort it out.
