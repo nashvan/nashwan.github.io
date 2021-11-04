@@ -6,6 +6,16 @@
 
 A Senior Cloud & DevOps Engineer with extensive 11 years of experience working in ITIL environments, holding double master’s degree in Networks along with 2x AWS Certified Solution Architect and Security Speciality, CCNA Routing and Switching & PRINCE2® - Project Management certificates with a primary focus on DevSecOps, AWS and Azure Cloud, VMware Virtualisation, Kubernetes, CICD, server infrastructure (windows, Linux, Unix), and Cisco networking.
 
+Experience across technologies including:
+• Linux Systems: infrastructure services, including DNS, DHCP, web, DB, Nginx, NAT, squid, IDS/IPS, monitoring.
+• Windows Servers: 2008, 2012, 2016 (DHCP, DNS, Active Directory, Group policy) and PowerShell.
+• AWS Cloud: VPC, VPN, EC2, RDS, ELB, S3, IAM, ECS, EKS, Lambda, Security Groups, Lex Bot, Amazon Connect.
+• Azure Cloud: IaaS & PaaS (VMs, SQL Manages instances, Web App, vNet, Azure AD, SQL DB).
+• DevOps: Jenkins, github, AWS CodeDeploy, Docker, Kubernetes, Terraform, Ansible, Python, Shell.
+• Virtualization: VMware ESX6.5, vCenter, Microsoft Hyper-V.
+• Networks: switching, VLAN, routing, OSPF, VRRP, NAT, clustering and load balancing.
+• Network Security: Cisco ASA Firewall, Cisco FirePower, Checkpoints, Nginx proxy.
+
 
 ## Contents of github space
 
