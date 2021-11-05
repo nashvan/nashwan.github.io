@@ -247,7 +247,7 @@ In helm chart template folder we need the following templates:
 - service.yaml
 
 Lets now check the deployment template:
-```\h*go\k
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
