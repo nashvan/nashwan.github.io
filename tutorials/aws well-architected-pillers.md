@@ -8,13 +8,16 @@ The Operational Excellence pillar includes the ability to support development an
 - Infra and Operation as Code - Terraform
 - SSM Inventory, SSM Patch Manager
 - SNS(publisher and subscriber)
+    - SNS can **notify someone** or **trigger an automation remediation**
 - CloudWatch (logs, Alarms, metrics)
     - metrics: 
         - Application Metrics(number of requests, error codes, ets)
             - lambda function get invoked after every data write using the S3 PutObject API call
             - for lambda we usually monitor invocation and error 
         - Infra Metrics (CPU, memory, disk usage)
-    - Alarm: CloudWatch alarm
+    - Alarm:
+        - Can be used to Auto initiate an action on your behalf. Action can be either **SNS-topic** or **Auto-Scaling Policy**. 
+
 
 **Design Principles**
 There are five design principles for operational excellence in the cloud:
