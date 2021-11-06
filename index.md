@@ -20,6 +20,7 @@ Experience across technologies including but not limited to:
 ## Contents and Topics
 
 - [Deploy NodeJs App to K8s with Helm](https://nashvan.github.io/tutorials/deploy-to-k8s-with-helm)
+- [Test](https://nashvan.github.io/tutorials/goreadme.deploy-to-k8s-with-helm)
 - [CKAD Exam Prep](https://nashvan.github.io/ckad)
 - [Pod design - 20%](https://nashvan.github.io/ckad/pod_design)
 - [Configuration - 18%](https://nashvan.github.io/ckad/configuration)
