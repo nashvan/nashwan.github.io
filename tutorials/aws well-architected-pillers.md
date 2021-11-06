@@ -81,12 +81,6 @@ The Performance Efficiency pillar includes the ability to use computing resource
 **Design Principles**
 There are five design principles for performance efficiency in the cloud:
 
-- Democratize advanced technologies
-- Go global in minutes
-- Use serverless architectures
-- Experiment more often
-- Consider mechanical sympathy
-
 - **Consume advanced technologies as a service** – Use more managed services as they reduce efforts on provisioning, configuring, scaling, backing up, etc.
 - **Go global in minutes** – Since AWS is globally deployed across multiple regions, you can leverage this and deploy your application to multiple regions to help lower the latency of your application
 - **Use serverless architectures** – Using serverless architectures helps you to run your code directly without managing any other services. For example, use S3 to host a static website instead of running it on an EC2 instance
@@ -107,11 +101,11 @@ The Cost Optimization pillar includes the ability to run systems to deliver busi
 **Design Principles**
 There are five design principles for cost optimization in the cloud:
 
-- Adopt a consumption model – Pay only for those resources which are actually in use and scale your resources up or down as per the demand. No need to pay static payment charges as per the demand forecasted
-- Measure overall efficiency – Keep measuring your costs over a time period to understand and keep track of the trends. Optimize wherever and whenever possible
-- Avoid spending money on operations – Leave all your operational expenditure on AWS and focus on your customers and business logic
-- Analyze and attribute expenditure – Attribute your own resources, analyze and monitor the expenditure for each individual department or team. Implement resource tagging and resource groups to analyze expenditure more efficiently
-- Use managed and app-level services to reduce TCO – Using managed apps helps to save overall costs of maintaining the services
+- **Adopt a consumption model** – Pay only for those resources which are actually in use and scale your resources up or down as per the demand. No need to pay static payment charges as per the demand forecasted
+- **Measure overall efficiency** – Keep measuring your costs over a time period to understand and keep track of the trends. Optimize wherever and whenever possible
+- **Avoid spending money on operations** – Leave all your operational expenditure on AWS and focus on your customers and business logic
+- **Analyze and attribute expenditure** – Attribute your own resources, analyze and monitor the expenditure for each individual department or team. Implement resource tagging and resource groups to analyze expenditure more efficiently
+- **Use managed and app-level services to reduce TCO** – Using managed apps helps to save overall costs of maintaining the services
 
 **Best Practices**
 As with the other pillars, there are trade-offs to consider. For example, do you want to optimize for speed to market or for cost? In some cases, it’s best to optimize for speed—going to market quickly, shipping new features, or simply meeting a deadline—rather than investing in up-front cost optimization.
