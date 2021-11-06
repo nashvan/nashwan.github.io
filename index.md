@@ -20,9 +20,10 @@ Experience across technologies including but not limited to:
 ## Contents and Topics
 
 - [Deploy NodeJs App to K8s with Helm](https://nashvan.github.io/tutorials/deploy-to-k8s-with-helm)
-- [Test](https://nashvan.github.io/tutorials/goreadme)
 - [CKAD Exam Prep](https://nashvan.github.io/ckad)
-- [AWS Well-Architected Pillers](https://nashvan.github.io/ckad/state_persistence)
+- [AWS Well-Architected Pillers](https://nashvan.github.io/tutorials/aws well-architected-pillers)
+- [Test](https://nashvan.github.io/tutorials/goreadme)
+
 
 ## CKAD Exam Practice with Katakode
 - [Practice CKAD Exam with Katakode](https://www.katacoda.com/fabito/scenarios/ckad)
