@@ -247,7 +247,7 @@ In helm chart template folder we need the following templates:
 - service.yaml
 
 Lets now check the deployment template:
-```
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -308,7 +308,7 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-```
+
 
 At first glance you might see these strange parts between two pairs of curly brackets, like `image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"` . They are written in Go template language and are referring to a value located in a `values.yaml` which is located inside the root folder of a chart. For mentioned example Helm will try to match it with a value from `values.yaml`:
 
