@@ -22,11 +22,11 @@ The Operational Excellence pillar includes the ability to support development an
 **Design Principles**
 There are five design principles for operational excellence in the cloud:
 
-- Perform operations as code
-- Make frequent, small, reversible changes
-- Refine operations procedures frequently
-- Anticipate failure
-- Learn from all operational failures
+- **Operations as Code** – Automate the creation of different infrastructure using tools like CloudFormation
+- **Automated Documentation from Annotations** – We should document how different components of the system interact with each other. Whenever there are some changes in the systems, the documentation should also update automatically. This will prevent integrations from breaking apart upon some changes
+- **Make frequent and reversible changes** – It is a good idea to make small and reversible changes to the production environment, rather than big time changes. This helps to quickly restore to a version in case there are some issues with the changes
+- **Anticipate Failure** – Always design your system to anticipate and accept failures, test them to make your system more robust
+- **Learn from Operational Failures** – Whenever there is a failure, make a note of the root cause and take lessons
 
 **Best Practices**
 Operations teams need to understand their business and customer needs so they can support business outcomes. Ops creates and uses procedures to respond to operational events, and validates their effectiveness to support business needs. Ops also collects metrics that are used to measure the achievement of desired business outcomes.
@@ -37,7 +37,7 @@ Everything continues to change—your business context, business priorities, cus
 # 2. Security
 The Security pillar includes the ability to protect data, systems, and assets to take advantage of cloud technologies to improve your security. You can find prescriptive guidance on implementation in the Security Pillar whitepaper.
 
-**Design Principles**
+**-Design Principles**
 There are seven design principles for security in the cloud:
 
 - Implement a strong identity foundation
