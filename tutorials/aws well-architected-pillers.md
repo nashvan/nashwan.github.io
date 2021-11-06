@@ -40,13 +40,13 @@ The Security pillar includes the ability to protect data, systems, and assets to
 **-Design Principles**
 There are seven design principles for security in the cloud:
 
-- Implement a strong identity foundation
-- Enable traceability
-- Apply security at all layers
-- Automate security best practices
-- Protect data in transit and at rest
-- Keep people away from data
-- Prepare for security events
+- **Strong Identity Foundation** – Follow key principles like granting least privilege, separation of duties, appropriate authorization level, etc.
+- **Enable Traceability** – Audit any change or action to any environment and by whom. This enables us to maintain transparency within the organization. Monitor logs and takes action when an anomaly is detected
+- **Security at all Layers** – Apply security at multiple layers, like VPC, Load Balancers, Security Groups, EC2 instances, etc.
+- **Automate Security Best Practices** – Implement security as code and version control all security measures for future use
+- **Protect Data in Transit and at Rest** – Data should be protected using encryption, authorization tokens and Access Control Mechanisms
+- **Keep people away from data** – As far as possible, data should be kept away from handling by many people by implementing proper policies and access control
+- **Prepare for security events**
 
 **Best Practices**
 Before you architect any workload, you need to put in place practices that influence security. You’ll want to control who can do what. In addition, you want to be able to identify security incidents, protect your systems and services, and maintain the confidentiality and integrity of data through data protection.
@@ -61,11 +61,10 @@ The Reliability pillar encompasses the ability of a workload to perform its inte
 **Design Principles**
 There are five design principles for reliability in the cloud:
 
-- Automatically recover from failure
-- Test recovery procedures
-- Scale horizontally to increase aggregate workload availability **(Auto-Scaling)**
-- Stop guessing capacity
-- Manage change in automation
+- **Test Recovery Procedures** – Inject or simulate failures to your system and test how it recovers from the failure
+- **Automatically Recover from Failure** – Ensure that recoveries from failures are always automated, monitor metrics on CloudWatch, and take proper actions whenever any thresholds are reached. Automated notifications to humans should also be set up as a best practice
+- **Scale horizontally** – Avoid using monolithic architectures and use smaller resources to keeps multiple systems isolated from one another
+- **Stop guessing capacity** – Since the cloud allows dynamic capacity management, you should never guess your capacity beforehand. Let the system automatically scale up and down based on the demand
 
 **Best Practices**
 To achieve reliability, you must start with the foundations—an environment where service quotas and network topology accommodate the workload. The workload architecture of the distributed system must be designed to prevent and mitigate failures. The workload must handle changes in demand or requirements, and it must be designed to detect failure and automatically heal itself.
@@ -87,6 +86,13 @@ There are five design principles for performance efficiency in the cloud:
 - Use serverless architectures
 - Experiment more often
 - Consider mechanical sympathy
+
+- **Consume advanced technologies as a service** – Use more managed services as they reduce efforts on provisioning, configuring, scaling, backing up, etc.
+- **Go global in minutes** – Since AWS is globally deployed across multiple regions, you can leverage this and deploy your application to multiple regions to help lower the latency of your application
+- **Use serverless architectures** – Using serverless architectures helps you to run your code directly without managing any other services. For example, use S3 to host a static website instead of running it on an EC2 instance
+- **Experiment more often** – Experimenting your solution across several metrics helps you identify performance bottlenecks and take appropriate actions
+- **Consider mechanical sympathy**
+
 
 **Best Practices**
 Take a data-driven approach to building a high-performance architecture. Gather data on all aspects of the architecture, from the high-level design to the selection and configuration of resource types.
