@@ -4,10 +4,22 @@ Here are the five pillars of an AWS Well-Architected Framework:
 # 1. Operational Excellence
 The Operational Excellence pillar includes the ability to support development and run workloads effectively, gain insight into their operation, and continuously improve supporting processes and procedures to delivery business value. You can find prescriptive guidance on implementation in the Operational Excellence Pillar whitepaper.
 
+**Tools**
+- Infra and Operation as Code - Terraform
+- SSM Inventory, SSM Patch Manager
+- SNS(publisher and subscriber)
+- CloudWatch (logs, Alarms, metrics)
+    - metrics: 
+        - Application Metrics(number of requests, error codes, ets)
+            - lambda function get invoked after every data write using the S3 PutObject API call
+            - for lambda we usually monitor invocation and error 
+        - Infra Metrics (CPU, memory, disk usage)
+    - Alarm: CloudWatch alarm
+
 **Design Principles**
 There are five design principles for operational excellence in the cloud:
 
-- Perform operations as code **(Infra and Operation as Code - Terraform, and SSM)**
+- Perform operations as code
 - Make frequent, small, reversible changes
 - Refine operations procedures frequently
 - Anticipate failure
