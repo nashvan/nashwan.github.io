@@ -162,3 +162,13 @@ kubectl create -f policy.yaml
 kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- http://nginx:80 --timeout 2                          # This should not work. --timeout is optional here. But it helps to get answer more quickly (in seconds vs minutes)
 kubectl run busybox --image=busybox --rm -it --restart=Never --labels=access=granted -- wget -O- http://nginx:80 --timeout 2  # This should be fine
 ```
+
+## Contents
+
+- [Core Concepts - 13%](https://nashvan.github.io/ckad/ckad_core_concepts)
+- [Multi-container pods - 10%](https://nashvan.github.io/ckad/multi_container_pod)
+- [Pod design - 20%](https://nashvan.github.io/ckad/pod_design)
+- [Configuration - 18%](https://nashvan.github.io/ckad/configuration)
+- [Observability - 18%](https://nashvan.github.io/ckad/observability)
+- [Services and networking - 13%](https://nashvan.github.io/ckad/services_and_networking)
+- [State persistence - 8%](https://nashvan.github.io/ckad/state_persistence)

@@ -170,3 +170,13 @@ kubectl delete po busybox --force --grace-period=0
 ```bash
 kubectl top nodes
 ```
+
+## Contents
+
+- [Core Concepts - 13%](https://nashvan.github.io/ckad/ckad_core_concepts)
+- [Multi-container pods - 10%](https://nashvan.github.io/ckad/multi_container_pod)
+- [Pod design - 20%](https://nashvan.github.io/ckad/pod_design)
+- [Configuration - 18%](https://nashvan.github.io/ckad/configuration)
+- [Observability - 18%](https://nashvan.github.io/ckad/observability)
+- [Services and networking - 13%](https://nashvan.github.io/ckad/services_and_networking)
+- [State persistence - 8%](https://nashvan.github.io/ckad/state_persistence)
