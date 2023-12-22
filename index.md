@@ -9,10 +9,10 @@ A Senior Cloud and Container Platform Engineer with extensive 13 years of experi
 
 ## Contents and Topics
 
-- [Deploy NodeJs App to K8s with Helm](https://nashvan.github.io/tutorials/deploy-to-k8s-with-helm)
-- [CKAD Exam Prep](https://nashvan.github.io/ckad)
-- [AWS Well-Architected Pillers](https://nashvan.github.io/tutorials/aws well-architected-pillers)
-- [Test](https://nashvan.github.io/tutorials/goreadme)
+- [Deploy NodeJs App to K8s with Helm](https://nbmustafa.github.io/tutorials/deploy-to-k8s-with-helm)
+- [CKAD Exam Prep](https://nbmustafa.github.io/ckad)
+- [AWS Well-Architected Pillers](https://nbmustafa.github.io/tutorials/aws well-architected-pillers)
+- [Test](https://nbmustafa.github.io/tutorials/goreadme)
 
 
 ## CKAD Exam Practice with Katakode
@@ -21,4 +21,4 @@ A Senior Cloud and Container Platform Engineer with extensive 13 years of experi
 
 
 ### Support or Contact
-Having trouble with Pages? [contact support](https://nashvan.github.io/contact) and we’ll help you sort it out.
+Having trouble with Pages? [contact support](https://nbmustafa.github.io/contact) and we’ll help you sort it out.
