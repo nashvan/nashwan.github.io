@@ -22,7 +22,7 @@ Deep Learning, Artificial Intelligence, Cyber Security both offensive and defens
 #### Contents and Topics
 
 - [Deploy NodeJs App to K8s with Helm](https://nbmustafa.github.io/contents/tutorials/deploy-to-k8s-with-helm)
-- [CKAD Exam Prep](https://nbmustafa.github.io/contents/ckad)
+- [CKAD Exam Prep](https://nbmustafa.github.io/contents/exams)
 - [AWS Well-Architected Pillers](https://nbmustafa.github.io/contents/tutorials/aws well-architected-pillers)
 - [Test](https://nbmustafa.github.io/contents/tutorials/goreadme)
 
