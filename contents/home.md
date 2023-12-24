@@ -8,7 +8,7 @@
 Lead Platform Engineer with extensive 13 years of experience working in ITIL environments, holding double master’s degree in Networks along with 2xAWS Certified Solution Architect and Security Speciality, CCNA Routing and Switching & PRINCE2® - Project Management certificates with a primary focus on DevSecOps, AWS and GCP cloud, Kubernetes, multi-organisation,  multi-tenant platform environment, CICD, automation, cloud security, cloud migration and re-architecture, kubernetes, contairs, EKS, GKE, service mesh, and serverless.
 
 #### Email
-Nashwan.bilal@gmail.com
+Nashwan[at]nmustafa.io
 
 #### Education
 2004-2007, BSc. Computer Science, Univeristiy of Salahaddin - Erbil, Kurdistan.
