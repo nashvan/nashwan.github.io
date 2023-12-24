@@ -27,7 +27,7 @@ Deep Learning, Artificial Intelligence, Cyber Security both offensive and defens
 - [Test](https://nbmustafa.github.io/contents/tutorials/goreadme)
 
 
-#### CKAD Exam Practice with Katakode
+#### CKAD Exam Practice with KillerCoda
 - [Practice CKAD Exam with Killercoda](https://killercoda.com/killer-shell-ckad)
 
 

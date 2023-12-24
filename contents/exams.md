@@ -18,7 +18,7 @@ During the exam, you are allowed to keep only one other browser tab open to refe
 - [Services and networking - 13%](https://nbmustafa.github.io/contents/ckad/services_and_networking)
 - [State persistence - 8%](https://nbmustafa.github.io/contents/ckad/state_persistence)
 
-#### CKAD Exam Practice with Katakode
-- [Practice CKAD Exam with Katakode](https://www.katacoda.com/fabito/scenarios/ckad)
+#### CKAD Exam Practice with KillerCoda
+- [Practice CKAD Exam with Killercoda](https://killercoda.com/killer-shell-ckad)
 
 
