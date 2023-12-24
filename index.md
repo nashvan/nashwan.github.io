@@ -1,5 +1,5 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Author Nashwan](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)](https://github.com/nashvan)
+[![Author Nashwan](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)](https://github.com/nbmustafa)
 [![CertBadges](https://img.shields.io/badge/CertBadges-ACSA,SCS,CCNA,ITIL,PRINCE2-brightgreen.svg?style=flat-square)](https://www.linkedin.com/in/nashwan-mustafa/)
 
 ## Welcome to my GitHub Pages
@@ -16,8 +16,8 @@ A Senior Cloud and Container Platform Engineer with extensive 13 years of experi
 
 
 ## CKAD Exam Practice with Katakode
-- [Practice CKAD Exam with Katakode](https://www.katacoda.com/fabito/scenarios/ckad)
-- [CKAD Practice Challenge](https://www.katacoda.com/liptanbiswas/courses/ckad-practice-challenges)
+- [Practice CKAD Exam with Killercoda](https://killercoda.com/killer-shell-ckad)
+
 
 
 ### Support or Contact

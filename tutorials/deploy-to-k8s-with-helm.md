@@ -132,17 +132,17 @@ CMD [ "node", "./index.js" ]
 Now, lets build the docker image for this nodejs app and run the image as container:
 ```bash
 cd src/
-docker build --build-arg=GIT_SHA=$(git rev-parse --short HEAD) -t nashvan/myanzapp .
+docker build --build-arg=GIT_SHA=$(git rev-parse --short HEAD) -t nbmustafa/myanzapp .
 
 docker images
 REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
-nashvan/myapp                 latest    de4c6d54f34c   33 minutes ago   980MB
+nbmustafa/myapp                 latest    de4c6d54f34c   33 minutes ago   980MB
 
 docker run -i -p 5000:8080 de4c6d54f34c
 
 # tag image and publish it to dockerhub repo
-docker tag nashvan/myapp:latest nashvan/myapp:1.0.0
-docker push nashvan/myapp:1.0.0
+docker tag nbmustafa/myapp:latest nbmustafa/myapp:1.0.0
+docker push nbmustafa/myapp:1.0.0
 ```
 Exellent, so now we have the image build and pushed to dockerhub. 
 
@@ -314,7 +314,7 @@ At first glance you might see these strange parts between two pairs of curly bra
 
 ```bash
 image:
-  repository: nashvan/myapp
+  repository: nbmustafa/myapp
   tag: 1.0.0
   pullPolicy: IfNotPresent
 ```
@@ -390,7 +390,7 @@ env:
     variable5: value5
     variable6: value6
 image:
-  repository: nashvan/myapp
+  repository: nbmustafa/myapp
   tag: 1.0.0
   pullPolicy: IfNotPresent
 imagePullSecrets: []
@@ -423,9 +423,9 @@ affinity: {}
 Now, in order to create | upadte | delete release for our application, create the following make file, then we use Make to :
 ```bash
 GIT_SHA=$(shell git rev-parse --short HEAD)
-USER=nashvan
+USER=nbmustafa
 RELEASE_TAG=1.0.0
-HELM_REPO=https://nashvan.github.io/myapp-helm-chart/
+HELM_REPO=https://nbmustafa.github.io/myapp-helm-chart/
 RELEASE_NAME=dev
 
 build:
@@ -501,4 +501,4 @@ But there is still one thing left, which holds us from establishing a fully decl
 
 
 
-For more articles see [My Github Page](https://nashvan.github.io).
+For more articles see [My Github Page](https://nbmustafa.github.io).
