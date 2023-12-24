@@ -163,12 +163,14 @@ kubectl run busybox --image=busybox --rm -it --restart=Never -- wget -O- http://
 kubectl run busybox --image=busybox --rm -it --restart=Never --labels=access=granted -- wget -O- http://nginx:80 --timeout 2  # This should be fine
 ```
 
-## Contents
-- [Core Concepts - 13%](https://nbmustafa.github.io/ckad/ckad_core_concepts)
-- [Multi-container pods - 10%](https://nbmustafa.github.io/ckad/multi_container_pod)
-- [Pod design - 20%](https://nbmustafa.github.io/ckad/pod_design)
-- [Configuration - 18%](https://nbmustafa.github.io/ckad/configuration)
-- [Observability - 18%](https://nbmustafa.github.io/ckad/observability)
-- [Services and networking - 13%](https://nbmustafa.github.io/ckad/services_and_networking)
-- [State persistence - 8%](https://nbmustafa.github.io/ckad/state_persistence)
+#### Contents
 
+- [Core Concepts - 13%](https://nbmustafa.github.io/contents/ckad/ckad_core_concepts)
+- [Multi-container pods - 10%](https://nbmustafa.github.io/contents/ckad/multi_container_pod)
+- [Pod design - 20%](https://nbmustafa.github.io/contents/ckad/pod_design)
+- [Configuration - 18%](https://nbmustafa.github.io/contents/ckad/configuration)
+- [Observability - 18%](https://nbmustafa.github.io/contents/ckad/observability)
+- [Services and networking - 13%](https://nbmustafa.github.io/contents/ckad/services_and_networking)
+- [State persistence - 8%](https://nbmustafa.github.io/contents/ckad/state_persistence)
+
+- [Home Page](https://nbmustafa.github.io/contents/home)
