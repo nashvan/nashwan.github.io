@@ -19,18 +19,5 @@ Nashwan[at]nmustafa.io
 Deep Learning, Artificial Intelligence, Cyber Security both offensive and defensive technologies.
 
 
-#### Contents and Topics
-
-- [Deploy NodeJs App to K8s with Helm](https://nbmustafa.github.io/contents/tutorials/deploy-to-k8s-with-helm)
-- [CKAD Exam Prep](https://nbmustafa.github.io/contents/exams)
-- [AWS Well-Architected Pillers](https://nbmustafa.github.io/contents/tutorials/aws-well-architected-pillers)
-- [Test](https://nbmustafa.github.io/contents/tutorials/goreadme)
-
-
-#### CKAD Exam Practice with KillerCoda
-- [Practice CKAD Exam with Killercoda](https://killercoda.com/killer-shell-ckad)
-
-
-
 #### Support or Contact
 Having trouble with Pages? [contact support](https://nbmustafa.github.io/contact) and we’ll help you sort it out.
