@@ -70,45 +70,41 @@
     
     <nav>
         <ul>
-            <li><a href="#" onclick="loadContent('content/ckad/ckad_core_concepts.md')">CKAD Core Concepts </a></li>
-            <li><a href="#" onclick="loadContent('content/ckad/configuration.md')">Configuration</a></li>
-            <li><a href="#" onclick="loadContent('content/ckad/multi_container_pod.md')">Multi Container Pod</a></li>
-            <li><a href="#" onclick="loadContent('content/ckad/observability.md')">Observability</a></li>
-            <li><a href="#" onclick="loadContent('content/ckad/pod_design.md')">Pod Design</a></li>
-            <li><a href="#" onclick="loadContent('content/ckad/services_and_networking.md')">Services and Networking</a></li>
-            <li><a href="#" onclick="loadContent('content/ckad/state_persistence.md')">State Persistence</a></li>
+            <li><a href="#" onclick="loadMarkdown('content/ckad/ckad_core_concepts.md')">CKAD Core Concepts </a></li>
+            <li><a href="#" onclick="loadMarkdown('content/ckad/configuration.md')">Configuration</a></li>
+            <li><a href="#" onclick="loadMarkdown('content/ckad/multi_container_pod.md')">Multi Container Pod</a></li>
+            <li><a href="#" onclick="loadMarkdown('content/ckad/observability.md')">Observability</a></li>
+            <li><a href="#" onclick="loadMarkdown('content/ckad/pod_design.md')">Pod Design</a></li>
+            <li><a href="#" onclick="loadMarkdown('content/ckad/services_and_networking.md')">Services and Networking</a></li>
+            <li><a href="#" onclick="loadMarkdown('content/ckad/state_persistence.md')">State Persistence</a></li>
 
-            <li><a href="#" onclick="loadContent('content/contents/articles/deploy-to-k8s-with-helm.md')">Configuration</a></li>
-            <li><a href="#" onclick="loadContent('content/contents/articles/aws-well-architected-pillers.md')">Configuration</a></li>
+            <li><a href="#" onclick="loadMarkdown('content/contents/articles/deploy-to-k8s-with-helm.md')">Configuration</a></li>
+            <li><a href="#" onclick="loadMarkdown('content/contents/articles/aws-well-architected-pillers.md')">Configuration</a></li>
             <!-- Add more files as needed -->
         </ul>
     </nav>
 
-    <div id="content-container">
-        <!-- Content will be loaded here -->
-    </div>
+    <div id="content"></div>
 
     <script>
-        function loadContent(fileName) {
-            // Use fetch to get the content of the Markdown file
-            fetch(fileName)
-                .then(response => response.text())
-                .then(data => {
-                    // Convert Markdown to HTML using a library (e.g., marked.js)
-                    const converter = new marked.Converter();
-                    const htmlContent = converter.makeHtml(data);
-
-                    // Display the HTML content in the container
-                    document.getElementById('content-container').innerHTML = htmlContent;
-                })
-                .catch(error => {
-                    console.error('Error fetching content:', error);
-                });
+        function loadMarkdown(fileName) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Convert Markdown to HTML
+                    var converter = new showdown.Converter();
+                    var htmlContent = converter.makeHtml(this.responseText);
+                    
+                    // Display the content
+                    document.getElementById("content").innerHTML = htmlContent;
+                }
+            };
+            xhttp.open("GET", fileName, true);
+            xhttp.send();
         }
     </script>
 
-    <!-- Include a Markdown to HTML converter library, like marked.js -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.10.2/showdown.min.js"></script>
 
 
     <!-- Footer-->
