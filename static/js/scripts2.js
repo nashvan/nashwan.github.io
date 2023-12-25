@@ -1,9 +1,9 @@
 
 
-const content_dir = 'contents/ckad'
-const config_file = 'config.yml'
+const content_dir1 = 'contents/ckad'
+const config_file1 = 'config.yml'
 // const section_names = ['home', 'publications', 'awards', 'exams']
-const section_names = ['ckad_core_concepts', 'configuration', 'multi_container_pod', 'observability', 'pod_design', 'services_and_networking', 'state_persistence']
+const section_names1 = ['ckad_core_concepts', 'configuration', 'multi_container_pod', 'observability', 'pod_design', 'services_and_networking', 'state_persistence']
 
 
 window.addEventListener('DOMContentLoaded', event => {
@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
     // Yaml
-    fetch(content_dir + config_file)
+    fetch(content_dir1 + config_file1)
         .then(response => response.text())
         .then(text => {
             const yml = jsyaml.load(text);
