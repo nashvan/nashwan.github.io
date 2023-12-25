@@ -1,9 +1,4 @@
-<figure>
-  <img
-  src="static/assets/img/background.jpeg"
-  alt="Platform Engineering">
-  <figcaption>N Mustafa</figcaption>
-</figure>
+![Alt](static/assets/img/background.jpeg “Platform Engineering”)
 
 # Core Concepts (13%)
 
