@@ -87,12 +87,14 @@
     <div id="content"></div>
 
     <script>
+        // Initialize showdown
+        var converter = new showdown.Converter();
+
         function loadMarkdown(fileName) {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     // Convert Markdown to HTML
-                    var converter = new showdown.Converter();
                     var htmlContent = converter.makeHtml(this.responseText);
                     
                     // Display the content
