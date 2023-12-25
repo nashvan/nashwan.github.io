@@ -1,7 +1,16 @@
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Author Nashwan](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)](https://github.com/nbmustafa)
-[![CertBadges](https://img.shields.io/badge/CertBadges-ACSA,SCS,CCNA,ITIL,PRINCE2-brightgreen.svg?style=flat-square)](https://www.linkedin.com/in/nashwan-mustafa/) <br />
+[![CertBadges](https://img.shields.io/badge/CertBadges-ACSA,SCS,CCNA,ITIL,PRINCE2-brightgreen.svg?style=flat-square)](https://www.linkedin.com/in/nashwan-mustafa/) 
+<a href= "https://www.linkedin.com/in/nashwan-mustafa/">
+  <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=Linkedin&logoColor=white"/>
+</a>
+<a href= "mailto:mustafan@gmail.com">
+  <img src="https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white"/>
+</a>
+<br>
+<br>
+<br />
 
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
