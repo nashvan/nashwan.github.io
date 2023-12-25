@@ -1,3 +1,10 @@
+<figure>
+  <img
+  src="static/assets/img/background.jpeg"
+  alt="Platform Engineering">
+  <figcaption>N Mustafa</figcaption>
+</figure>
+
 # Core Concepts (13%)
 
 
