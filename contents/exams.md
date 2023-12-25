@@ -9,7 +9,6 @@ A set of exercises that helped me prepare for the [Certified Kubernetes Applicat
 During the exam, you are allowed to keep only one other browser tab open to refer official documentation. Make a mental note of the breadcrumb at the start of the excercise section, to quickly locate the relevant document in kubernetes.io. It is recommended that you read official documents before attempting exercises below it.
 
 #### CKAD Contents
-- [CKAD New](https://nbmustafa.github.io/pages.html)
 - [Core Concepts - 13%](https://nbmustafa.github.io/contents/ckad/ckad_core_concepts)
 - [Multi-container pods - 10%](https://nbmustafa.github.io/contents/ckad/multi_container_pod)
 - [Pod design - 20%](https://nbmustafa.github.io/contents/ckad/pod_design)
