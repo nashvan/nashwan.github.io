@@ -128,3 +128,7 @@ section .main-body{
 
 }
 
+.page-top-title {
+    border-bottom: 2px solid red;
+}
+
