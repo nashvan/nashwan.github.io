@@ -465,5 +465,4 @@ kubectl describe pod nginx # will see that a new secret called myuser-token-****
 - [Observability - 18%](https://nbmustafa.github.io/contents/ckad/observability)
 - [Services and networking - 13%](https://nbmustafa.github.io/contents/ckad/services_and_networking)
 - [State persistence - 8%](https://nbmustafa.github.io/contents/ckad/state_persistence)
-
 - [Home Page](https://nbmustafa.github.io)
