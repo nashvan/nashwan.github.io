@@ -67,42 +67,48 @@
         </div>
     </section>
     <!-- Top Section -->
+    
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadContent('content/ckad/ckad_core_concepts.md')">CKAD Core Concepts </a></li>
+            <li><a href="#" onclick="loadContent('content/ckad/configuration.md')">Configuration</a></li>
+            <li><a href="#" onclick="loadContent('content/ckad/multi_container_pod.md')">Multi Container Pod</a></li>
+            <li><a href="#" onclick="loadContent('content/ckad/observability.md')">Observability</a></li>
+            <li><a href="#" onclick="loadContent('content/ckad/pod_design.md')">Pod Design</a></li>
+            <li><a href="#" onclick="loadContent('content/ckad/services_and_networking.md')">Services and Networking</a></li>
+            <li><a href="#" onclick="loadContent('content/ckad/state_persistence.md')">State Persistence</a></li>
 
-    <!-- CKAD Core Concepts -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="ckad_core_concepts">
-        <div class="container px-5">
-            <header>
-                <h2 id="ckad_core_concepts-subtitle"><i class="devicon-kubernetes-plain colored"></i>CKAD Core Concept </h2>
-            </header>
-            <div class="main-body" id="ckad_core_concepts-md"></div>
+            <li><a href="#" onclick="loadContent('content/contents/articles/deploy-to-k8s-with-helm.md')">Configuration</a></li>
+            <li><a href="#" onclick="loadContent('content/contents/articles/aws-well-architected-pillers.md')">Configuration</a></li>
+            <!-- Add more files as needed -->
+        </ul>
+    </nav>
 
-        </div>
-    </section>
-    <!-- CKAD Core Concepts -->
+    <div id="content-container">
+        <!-- Content will be loaded here -->
+    </div>
 
-    <!-- Example Placeholder for ckad_core_concepts -->
-    <div id="ckad_core_concepts-md"></div>
+    <script>
+        function loadContent(fileName) {
+            // Use fetch to get the content of the Markdown file
+            fetch(fileName)
+                .then(response => response.text())
+                .then(data => {
+                    // Convert Markdown to HTML using a library (e.g., marked.js)
+                    const converter = new marked.Converter();
+                    const htmlContent = converter.makeHtml(data);
 
-    <!-- Example Placeholder for configuration -->
-    <div id="configuration-md"></div>
+                    // Display the HTML content in the container
+                    document.getElementById('content-container').innerHTML = htmlContent;
+                })
+                .catch(error => {
+                    console.error('Error fetching content:', error);
+                });
+        }
+    </script>
 
-    <!-- Example Placeholder for configuration -->
-    <div id="configuration-md"></div>
-
-    <!-- Example Placeholder for multi_container_pod -->
-    <div id="multi_container_pod-md"></div>
-
-    <!-- Example Placeholder for observability -->
-    <div id="observability-md"></div>
-
-    <!-- Example Placeholder for pod_design -->
-    <div id="pod_design-md"></div>
-
-    <!-- Example Placeholder for services_and_networking -->
-    <div id="services_and_networking-md"></div>
-
-    <!-- Example Placeholder for state_persistence -->
-    <div id="state_persistence-md"></div> -->
+    <!-- Include a Markdown to HTML converter library, like marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 
     <!-- Footer-->
@@ -116,11 +122,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Core JS-->
-    <script type="text/javascript" src="static/js/pages.js"></script>
-    <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
-
 
 </body>
 
