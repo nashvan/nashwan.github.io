@@ -49,40 +49,40 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
     // Marked
-    // marked.use({ mangle: false, headerIds: false })
-    // section_names.forEach((name, idx) => {
-    //     fetch(content_dir + name + '.md')
-    //         .then(response => response.text())
-    //         .then(markdown => {
-    //             const html = marked.parse(markdown);
-    //             document.getElementById(name + '-md').innerHTML = html;
-    //         }).then(() => {
-    //             // MathJax
-    //             MathJax.typeset();
-    //         })
-    //         .catch(error => console.log(error));
-    // })
-    
-    // Marked
-    marked.use({ mangle: false, headerIds: false });
+    marked.use({ mangle: false, headerIds: false })
     section_names.forEach((name, idx) => {
-        const [section, subSection] = name.split('/');
-
         fetch(content_dir + name + '.md')
             .then(response => response.text())
             .then(markdown => {
                 const html = marked.parse(markdown);
-                const targetElement = subSection ? document.getElementById(subSection + '-md') : document.getElementById(section + '-md');
-                if (targetElement) {
-                    targetElement.innerHTML = html;
-                } else {
-                    console.log("Unknown id: " + name);
-                }
+                document.getElementById(name + '-md').innerHTML = html;
             }).then(() => {
                 // MathJax
                 MathJax.typeset();
             })
             .catch(error => console.log(error));
-    });
+    })
+    
+    // // Marked
+    // marked.use({ mangle: false, headerIds: false });
+    // section_names.forEach((name, idx) => {
+    //     const [section, subSection] = name.split('/');
+
+    //     fetch(content_dir + name + '.md')
+    //         .then(response => response.text())
+    //         .then(markdown => {
+    //             const html = marked.parse(markdown);
+    //             const targetElement = subSection ? document.getElementById(subSection + '-md') : document.getElementById(section + '-md');
+    //             if (targetElement) {
+    //                 targetElement.innerHTML = html;
+    //             } else {
+    //                 console.log("Unknown id: " + name);
+    //             }
+    //         }).then(() => {
+    //             // MathJax
+    //             MathJax.typeset();
+    //         })
+    //         .catch(error => console.log(error));
+    // });
 
 }); 
