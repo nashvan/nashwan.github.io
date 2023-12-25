@@ -1,5 +1,3 @@
-![Alt](static/assets/img/background.jpeg “Platform Engineering”)
-
 # Core Concepts (13%)
 
 
