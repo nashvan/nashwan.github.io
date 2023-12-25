@@ -1,4 +1,4 @@
-<img width="99%" align="centre" alt="Github" src="../../static/assets/img/background.jpeg" />
+<img width="100%" align="centre" alt="Github" src="../../static/assets/img/background.jpeg" />
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Author Nashwan](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)](https://github.com/nbmustafa)
