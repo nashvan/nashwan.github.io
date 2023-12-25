@@ -22,7 +22,7 @@ During the exam, you are allowed to keep only one other browser tab open to refe
 - [Practice CKAD Exam with Killercoda](https://killercoda.com/killer-shell-ckad)
 
 
-#### Topics
+#### Articles
 
 - [Deploy NodeJs App to K8s with Helm](https://nbmustafa.github.io/contents/tutorials/deploy-to-k8s-with-helm)
 - [CKAD Exam Prep](https://nbmustafa.github.io/contents/exams)
