@@ -13,7 +13,7 @@ Nashwan[at]nmustafa.io
 #### Education
 2004-2007, BSc. Computer Science, Univeristiy of Salahaddin - Erbil, Kurdistan.
 
-2013-2015, Double Degree Master of Information Technology, Networks and Network MAnagement, School of Engineering and Science, Queensland University of Technology, Birsbane, Australia.
+2013-2015, Double Degree Master of Information Technology, Networks and Network Management, School of Engineering and Science, Queensland University of Technology, Birsbane, Australia.
 
 #### Professional Certifications
 - AWS Security Speciality
