@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', event => {
     // Marked
     marked.use({ mangle: false, headerIds: false })
     section_names.forEach((name, idx) => {
-        fetch(content_dir + name + '.md')
+        fetch(content_dir1 + name + '.md')
             .then(response => response.text())
             .then(markdown => {
                 const html = marked.parse(markdown);
