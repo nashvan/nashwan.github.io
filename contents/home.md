@@ -5,11 +5,6 @@
 <a href= "https://www.linkedin.com/in/nashwan-mustafa/">
   <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=Linkedin&logoColor=white"/>
 </a>
-<a href= "mailto:mustafan@gmail.com">
-  <img src="https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white"/>
-</a>
-<br>
-<br>
 <br />
 
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
