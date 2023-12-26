@@ -2,7 +2,7 @@
 
 const content_dir = 'contents/'
 const config_file = 'config.yml'
-const section_names = ['home', 'publications', 'awards', 'exams', 'devicon']
+const section_names = ['home', 'publications', 'awards', 'exams']
 // const section_names = ['home', 'publications', 'awards', 'exams', 'devicon', 'ckad/ckad_core_concepts', 'ckad/configuration', 'ckad/multi_container_pod', 'ckad/observability', 'ckad/pod_design', 'ckad/services_and_networking', 'ckad/state_persistence']
 
 
