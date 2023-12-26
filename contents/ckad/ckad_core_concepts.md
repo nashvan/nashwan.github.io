@@ -277,4 +277,4 @@ kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Use 
 - [State persistence - 8%](https://nbmustafa.github.io/contents/ckad/state_persistence)
 - [Home Page](https://nbmustafa.github.io)
 
-![#1589F0](https://placehold.co/*x160/1589F0/1589F0.png)
+![#1589F0](https://placehold.co/*x160/f2bd10/f2bd10.png)
