@@ -21,7 +21,7 @@
 Lead Platform Engineer with extensive 13 years of experience working in ITIL environments, with primary focus on DevSecOps, AWS and GCP cloud, Kubernetes, multi-organisation,  multi-tenant platform environment, CICD, automation, cloud security, cloud migration and re-architecture, kubernetes, contairs, EKS, GKE, service mesh, and serverless.
 
 #### Email
-Nashwan[at]nmustafa.io
+Nashwan[at]techie.com
 
 #### Education
 2004-2007, BSc. Computer Science, Univeristiy of Salahaddin - Erbil, Kurdistan.
