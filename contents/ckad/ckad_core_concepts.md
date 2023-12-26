@@ -276,3 +276,5 @@ kubernetes.io > Documentation > Tasks > Access Applications in a Cluster > [Use 
 - [Services and networking - 13%](https://nbmustafa.github.io/contents/ckad/services_and_networking)
 - [State persistence - 8%](https://nbmustafa.github.io/contents/ckad/state_persistence)
 - [Home Page](https://nbmustafa.github.io)
+
+![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) `#f2bd10`
