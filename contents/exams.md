@@ -4,9 +4,7 @@
 
 #### CKAD Exercises
 
-A set of exercises that helped me prepare for the [Certified Kubernetes Application Developer](https://www.cncf.io/certification/ckad/) exam, offered by the Cloud Native Computing Foundation, organized by curriculum domain. They may as well serve as learning and practicing with Kubernetes.
-
-During the exam, you are allowed to keep only one other browser tab open to refer official documentation. Make a mental note of the breadcrumb at the start of the excercise section, to quickly locate the relevant document in kubernetes.io. It is recommended that you read official documents before attempting exercises below it.
+A set of exercises that helped me prepare for the [Certified Kubernetes Application Developer](https://www.cncf.io/certification/ckad/) exam, offered by the Cloud Native Computing Foundation, organized by curriculum domain. They may as well serve as learning and practicing with Kubernetes. It is recommended that you read official documents before attempting exercises below it.
 
 #### CKAD Contents
 - [Core Concepts - 13%](https://nbmustafa.github.io/contents/ckad/ckad_core_concepts)
@@ -23,7 +21,7 @@ During the exam, you are allowed to keep only one other browser tab open to refe
 
 #### Articles
 
-- [Deploy NodeJs App to K8s with Helm](https://nbmustafa.github.io/contents/articles/deploy-to-k8s-with-helm)
+- [Deploy NodeJs App with Helm](https://nbmustafa.github.io/contents/articles/deploy-to-k8s-with-helm)
 - [CKAD Exam Prep](https://nbmustafa.github.io/contents/exams)
 - [AWS Well-Architected Pillers](https://nbmustafa.github.io/contents/articles/aws-well-architected-pillers)
 
