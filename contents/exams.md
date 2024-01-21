@@ -14,6 +14,9 @@ A set of exercises that helped me prepare for the [Certified Kubernetes Applicat
 - [Observability - 18%](https://nbmustafa.github.io/contents/ckad/observability)
 - [Services and networking - 13%](https://nbmustafa.github.io/contents/ckad/services_and_networking)
 - [State persistence - 8%](https://nbmustafa.github.io/contents/ckad/state_persistence)
+- [helm](https://nbmustafa.github.io/contents/ckad/helm)
+- [crd](https://nbmustafa.github.io/contents/ckad/crd)
+- [podman](https://nbmustafa.github.io/contents/ckad/podman)
 
 #### CKAD Exam Practice with KillerCoda
 - [Practice CKAD Exam with Killercoda](https://killercoda.com/killer-shell-ckad)
