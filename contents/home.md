@@ -15,7 +15,7 @@ A Senior Platform Engineer with extensive 13 years of experience working in ITIL
 Nashwan@techie.com
 
 #### Education
-- 2004-2007, BSc. Computer Science,Salahaddin University- Erbil, Kurdistan.
+- 2004-2007, BSc. Computer Science, Salahaddin University- Erbil, Kurdistan.
 - 2013-2015, Double Degree Master of Information Technology, Networks and Network Management, School of Engineering and Science, Queensland University of Technology, Birsbane, Australia.
 
 #### Professional Certifications
