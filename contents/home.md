@@ -19,6 +19,7 @@ Nashwan@techie.com
 - 2013-2015, Double Degree Master of Information Technology, Networks and Network Management, School of Engineering and Science, Queensland University of Technology, Birsbane, Australia.
 
 #### Professional Certifications
+- Certified Kubernetes Application Developer (CKAD)
 - AWS Security Speciality
 - AWS Certified Solution Architect 
 - Intermediate for Istio
