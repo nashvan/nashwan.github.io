@@ -2,7 +2,7 @@
 [![Author Nashwan](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)](https://github.com/nbmustafa)
 [![CertBadges](https://img.shields.io/badge/CertBadges-CKAD,ACSA,SCS,CS,CCNA,ITIL,PRINCE2-brightgreen.svg?style=flat-square)](https://www.linkedin.com/in/nashwan-mustafa/)
 
-### Istio Certificate Associate
+### Practice Istio Certificate Associate scenarios in my space in killercoda
 - [killercoda.com/nashwan](killercoda.com/nashwan)
 
 #### CKAD Exercises
