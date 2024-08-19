@@ -40,6 +40,7 @@ Nashwan@techie.com
 - Certified Kubernetes Application Developer (CKAD)
 - AWS Security Speciality
 - AWS Certified Solution Architect 
+- Certified in Cyber Security
 - Intermediate for Istio
 - Foundation for Istio
 - ITIL
