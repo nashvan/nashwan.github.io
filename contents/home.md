@@ -11,6 +11,12 @@
 
 A Senior Platform Engineer with extensive 13 years of experience working in ITIL environments, with primary focus on DevSecOps, AWS and GCP cloud, Kubernetes, multi-organisation,  multi-tenant platform environment, CICD, automation, cloud security, cloud migration and re-architecture, kubernetes, contairs, EKS, GKE, service mesh, and serverless.
 
+#### Technologies and toolings I Worked with:
+- Cloud: AWS, GCP, Azure
+- Infrastructure Services: DNS, DHCP, Web, DB, Nginx, NAT, IDP/IPS, Proxy, NAT, Routers, Edge Firewalls
+- DevOps and GitOps: Kubernetes, GitHub, Docker, Terraform, Golang, Python, Bash, FluxCD, Jenkins, Codefrehs
+- Cloud and K8S Security: Istio Service Mesh, AWS Network FW, NACLs, AWS SG, K8S netpolicy, Gatekeeper, Calico Global Network Policy for K8S. 
+- Cloud and K8S Network: VPC, Sbnets, TGW, TGW peering, AWS Direct Connect, Routing table, ALB, NLB, K8s services, Istio, Nginx Ingress. 
 
 #### Recent Projects and Accomplishments
 - Lead both EKS and AWS platform teams and their tenants to engineer and test solutions to deliver large and/or complex enhancements and changes, where the problem space may be ambiguous and lacking existing patterns
