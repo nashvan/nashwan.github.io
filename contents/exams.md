@@ -2,7 +2,7 @@
 [![Author Nashwan](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)](https://github.com/nbmustafa)
 [![CertBadges](https://img.shields.io/badge/CertBadges-CKAD,ACSA,SCS,CS,CCNA,ITIL,PRINCE2-brightgreen.svg?style=flat-square)](https://www.linkedin.com/in/nashwan-mustafa/)
 
-### Practice Istio Certificate Associate scenarios in my space in killercoda
+### Practice CKA, CKAD, k8s netpol, FluxCD, Pod Securirt, Istio Certificate Associate and many other K8s related scenarios in my killercoda space
 - [killercoda.com/nashwan](killercoda.com/nashwan)
 
 #### CKAD Exercises
