@@ -62,27 +62,5 @@ window.addEventListener('DOMContentLoaded', event => {
             })
             .catch(error => console.log(error));
     })
-    
-    // // Marked
-    // marked.use({ mangle: false, headerIds: false });
-    // section_names.forEach((name, idx) => {
-    //     const [section, subSection] = name.split('/');
-
-    //     fetch(content_dir + name + '.md')
-    //         .then(response => response.text())
-    //         .then(markdown => {
-    //             const html = marked.parse(markdown);
-    //             const targetElement = subSection ? document.getElementById(subSection + '-md') : document.getElementById(section + '-md');
-    //             if (targetElement) {
-    //                 targetElement.innerHTML = html;
-    //             } else {
-    //                 console.log("Unknown id: " + name);
-    //             }
-    //         }).then(() => {
-    //             // MathJax
-    //             MathJax.typeset();
-    //         })
-    //         .catch(error => console.log(error));
-    // });
 
 }); 
