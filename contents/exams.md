@@ -11,6 +11,7 @@
 - [Deploy NodeJs App with Helm](https://nbmustafa.github.io/contents/articles/deploy-to-k8s-with-helm)
 - [CKAD Exam Prep](https://nbmustafa.github.io/contents/ckad/ckad)
 - [AWS Well-Architected Pillers](https://nbmustafa.github.io/contents/articles/aws-well-architected-pillers)
+- [Shipping EKS container logs to AWs CloudWatch Logs](https://nbmustafa.github.io/contents/fluent-bit.html)
 
 
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
