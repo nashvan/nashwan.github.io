@@ -1,13 +1,7 @@
-
-
-const content_dir = 'contents/'
-const config_file = 'config.yml'
-const section_names = ['home', 'publications', 'awards', 'exams']
-// const section_names = ['home', 'publications', 'awards', 'exams', 'devicon', 'ckad/ckad_core_concepts', 'ckad/configuration', 'ckad/multi_container_pod', 'ckad/observability', 'ckad/pod_design', 'ckad/services_and_networking', 'ckad/state_persistence']
-
+const content_dir = 'contents/';
+const config_file = 'config.yml';
 
 window.addEventListener('DOMContentLoaded', event => {
-
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
@@ -15,7 +9,7 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#mainNav',
             offset: 74,
         });
-    };
+    }
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -30,8 +24,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-
-    // Yaml
+    // Load config
     fetch(content_dir + config_file)
         .then(response => response.text())
         .then(text => {
@@ -42,25 +35,27 @@ window.addEventListener('DOMContentLoaded', event => {
                 } catch {
                     console.log("Unknown id and value: " + key + "," + yml[key].toString())
                 }
-
-            })
+            });
         })
         .catch(error => console.log(error));
 
+    // Determine current section based on URL
+    const pathname = window.location.pathname;
+    let section = pathname.split("/").pop().replace('.html', '');
 
-    // Marked
-    marked.use({ mangle: false, headerIds: false })
-    section_names.forEach((name, idx) => {
-        fetch(content_dir + name + '.md')
-            .then(response => response.text())
-            .then(markdown => {
-                const html = marked.parse(markdown);
-                document.getElementById(name + '-md').innerHTML = html;
-            }).then(() => {
-                // MathJax
-                MathJax.typeset();
-            })
-            .catch(error => console.log(error));
-    })
+    if (!section || section === 'index') {
+        section = 'home'; // default to 'home' if no specific section is found
+    }
 
-}); 
+    // Load content based on the section
+    fetch(content_dir + section + '.md')
+        .then(response => response.text())
+        .then(markdown => {
+            const html = marked.parse(markdown);
+            document.getElementById('content').innerHTML = html;
+        }).then(() => {
+            // MathJax typesetting
+            MathJax.typeset();
+        })
+        .catch(error => console.log(error));
+});
