@@ -81,27 +81,6 @@
         <div id="content">
             <!-- Markdown content will be rendered here -->
         </div>
-
-        <script>
-            // List your articles here
-            const articles = [
-                { title: "Article 1", file: "article1.md" },
-                { title: "Article 2", file: "article2.md" },
-                // Add more articles as needed
-            ];
-    
-            const list = document.getElementById('articles-list');
-    
-            articles.forEach(article => {
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = `article.html?file=${encodeURIComponent(article.file)}`;
-                a.textContent = article.title;
-                li.appendChild(a);
-                list.appendChild(li);
-            });
-        </script>
-    
         <!-- Include marked.js -->
         <script src="../static/js/marked.min.js"></script>
         <!-- Your custom script -->
