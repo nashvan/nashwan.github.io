@@ -40,6 +40,7 @@
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
+  --bs-orange: #f05f40;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 41, 55, 240;
@@ -10885,7 +10886,7 @@ section {
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover {
 
-   color: var(--bs-blue)
+   color: var(--bs-orange)
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
   color: #2937f0;
