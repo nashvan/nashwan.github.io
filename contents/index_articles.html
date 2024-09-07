@@ -76,33 +76,15 @@
 
 
     <!-- Article Content -->
-    <body>
-        <h1>Articles</h1>
-        <ul id="articles-list">
-            <!-- Articles will be listed here -->
+    <header>
+        <h1>My Articles</h1>
+    </header>
+    <main>
+        <ul>
+            <li><a href="article.html?file=articles/article1.md">Article 1</a></li>
+            <li><a href="article.html?file=articles/article2.md">Article 2</a></li>
         </ul>
-
-        <script>
-            // List your articles here
-            const articles = [
-                { title: "Article 1", file: "articles/article1.md" },
-                { title: "Article 2", file: "articles/article2.md" },
-                // Add more articles as needed
-            ];
-    
-            const list = document.getElementById('articles-list');
-    
-            articles.forEach(article => {
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = `article.html?file=${encodeURIComponent(article.file)}`;
-                a.textContent = article.title;
-                li.appendChild(a);
-                list.appendChild(li);
-            });
-        </script>
-    
-    </body>
+    </main>
     <!-- Article content -->
 
     <!-- Footer-->
