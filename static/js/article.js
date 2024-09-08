@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const file = urlParams.get('file');
 
     if (file) {
-        fetch(`articles/${file}`)
+        fetch(`contents/articles/${file}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok.');
