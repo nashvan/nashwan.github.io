@@ -1,9 +1,6 @@
-import { marked } from 'marked'
-// const { marked } = require('marked');
-
+import { marked } from 'marked';
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the filename from the query string
     const urlParams = new URLSearchParams(window.location.search);
     const file = urlParams.get('file');
 
