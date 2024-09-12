@@ -1,4 +1,4 @@
-import { marked } from './static/js/node_modules/marked';
+import { marked } from '/static/js/node_modules/marked';
 
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
