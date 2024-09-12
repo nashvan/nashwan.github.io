@@ -1,4 +1,6 @@
 import { marked } from 'marked'
+const { marked } = require('marked');
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Get the filename from the query string
