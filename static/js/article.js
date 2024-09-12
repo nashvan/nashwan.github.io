@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (file) {
         console.log(`Loading file: ${file}`);
-        fetch(`contents/articles/${file}`)
+        fetch(`/contents/articles/${file}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
