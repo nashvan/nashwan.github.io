@@ -1,5 +1,5 @@
-// import { marked } from 'marked'
-const { marked } = require('marked');
+import { marked } from 'marked'
+// const { marked } = require('marked');
 
 
 document.addEventListener('DOMContentLoaded', function () {
