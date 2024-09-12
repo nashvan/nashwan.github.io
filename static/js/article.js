@@ -1,4 +1,4 @@
-import { marked } from 'marked';
+import { marked } from './marked';
 
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
