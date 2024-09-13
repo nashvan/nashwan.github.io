@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 const articleTitle = file.replace('.md', '').replace(/-/g, ' ');
                 document.getElementById('article-title').innerText = articleTitle;
                 const htmlContent = marked(markdown);
-                document.getElementById('content').innerHTML = htmlContent;
+                document.getElementById('article-content').innerHTML = htmlContent;
             } else {
                 throw new Error('marked.js is not loaded.');
             }
         })
         .catch(error => {
-            document.getElementById('content').innerHTML = `Failed to load the article: ${error.message}`;
+            document.getElementById('article-content').innerHTML = `Failed to load the article: ${error.message}`;
             console.error('Fetch operation failed:', error);
         });
     } else {
-        document.getElementById('content').innerHTML = 'No article specified.';
+        document.getElementById('article-content').innerHTML = 'No article specified.';
     }
 });

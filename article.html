@@ -86,7 +86,7 @@
         <h1 id="article-title">Loading...</h1>
     </header>
     <main>
-        <article id="content">
+        <article id="article-content">
             <!-- Article content will be loaded here -->
         </article>
 
@@ -103,19 +103,19 @@
                 .then(response => response.text())
                 .then(text => {
                     // Use marked.js to convert markdown to HTML
-                    document.getElementById("content").innerHTML = marked(text);
+                    document.getElementById("article-content").innerHTML = marked(text);
                 })
                 .catch(error => console.error('Error loading markdown:', error));
             }
     
             // Get the article name from the URL query parameter
-            const article = getQueryParam('article');
+            const article = getQueryParam('article-content');
     
             // If an article is provided, load the corresponding markdown file
             if (article) {
                 loadMarkdown(`articles/${article}.md`);
             } else {
-                document.getElementById("content").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
+                document.getElementById("article-content").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
             }
         </script>
     </main>
@@ -149,7 +149,7 @@
 
     <!-- Core JS-->
     <!-- <script type="module" src="static/js/article.js"></script> -->
-    <script type="text/javascript" src="static/js/article.js"></script>
+    <!-- <script type="text/javascript" src="static/js/article.js"></script> -->
     <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
 
 </body>
