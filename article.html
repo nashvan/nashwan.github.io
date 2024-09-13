@@ -103,8 +103,7 @@
                 .then(response => response.text())
                 .then(text => {
                     // Use marked.js to convert markdown to HTML
-                    // document.getElementById("article-content").innerHTML = marked(text);
-                    document.getElementById("file").innerHTML = marked(text);
+                    document.getElementById("article-content").innerHTML = marked(text);
                 })
                 .catch(error => console.error('Error loading markdown:', error));
             }
@@ -118,8 +117,7 @@
             if (article) {
                 loadMarkdown(`articles/${article}.md`);
             } else {
-                // document.getElementById("article-content").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
-                document.getElementById("file").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
+                document.getElementById("article-content").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
             }
         </script>
     </main>
