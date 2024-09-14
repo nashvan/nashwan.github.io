@@ -103,21 +103,19 @@
                 .then(response => response.text())
                 .then(text => {
                     // Use marked.js to convert markdown to HTML
-                    document.getElementById("article-content").innerHTML = marked(text);
+                    document.getElementById("content").innerHTML = marked(text);
                 })
                 .catch(error => console.error('Error loading markdown:', error));
             }
     
             // Get the article name from the URL query parameter
-            // const article = getQueryParam('article-content');
             const article = getQueryParam('file');
-
     
             // If an article is provided, load the corresponding markdown file
             if (article) {
                 loadMarkdown(`articles/${article}.md`);
             } else {
-                document.getElementById("article-content").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
+                document.getElementById("content").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
             }
         </script>
     </main>
