@@ -12,13 +12,17 @@ function getQueryParam(param) {
 // JavaScript code to load Markdown file
 function loadMarkdown(file) {
     fetch(file)
-    .then(response => response.text())
+    .then(response => {
+        console.log('Response status:', response.status);
+        return response.text();
+    })
     .then(text => {
-        // Use marked.js to convert markdown to HTML
+        console.log('Markdown content:', text);
         document.getElementById("article-content").innerHTML = marked(text);
     })
     .catch(error => console.error('Error loading markdown:', error));
 }
+
 
 // Get the article name from the URL query parameter
 const article = getQueryParam('file');
