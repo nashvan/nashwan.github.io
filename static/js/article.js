@@ -1,6 +1,7 @@
-// // import { marked } from '/static/js/node_modules/marked';
+// import { marked } from '/static/js/node_modules/marked';
+import { marked } from 'marked';
 
-const marked = require('marked');
+// const marked = require('marked');
 
 // Function to get URL query parameter
 function getQueryParam(param) {
