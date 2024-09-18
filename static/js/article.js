@@ -55,7 +55,7 @@ const article = getQueryParam('file');
 
 // If an article is provided, load the corresponding markdown file
 if (article) {
-    loadMarkdown(`contents/articles/${article}`);
+    loadMarkdown(`/articles/${article}`);
 } else {
     document.getElementById("article-content").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
 }
