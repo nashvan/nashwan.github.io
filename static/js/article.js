@@ -1,5 +1,6 @@
 // import { marked } from '/static/js/node_modules/marked';
 // import { marked } from 'marked';
+import marked from 'marked';
 
 // const marked = require('marked');
 
