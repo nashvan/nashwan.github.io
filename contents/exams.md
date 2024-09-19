@@ -6,19 +6,4 @@
 - [killercoda.com/nashwan](https://killercoda.com/nashwan)
 
 
-#### Articles
 
-- [Deploy NodeJs App with Helm](https://nbmustafa.github.io/contents/articles/deploy-to-k8s-with-helm)
-- [CKAD Exam Prep](https://nbmustafa.github.io/contents/ckad/ckad)
-- [AWS Well-Architected Pillers](https://nbmustafa.github.io/contents/articles/aws-well-architected-pillers)
-- [Shipping EKS container logs to AWs CloudWatch Logs](https://nbmustafa.github.io/contents/articles/fluent-bit)
-
-
-![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
-![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
