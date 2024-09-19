@@ -1,35 +1,49 @@
-// import { marked } from '/static/js/node_modules/marked';
-// import { marked } from 'marked';
+// Configuration for Marked.js to disable mangling and header IDs
+marked.use({ mangle: false, headerIds: false });
 
-// const marked = require('marked');
-
-// Function to get URL query parameter
+// Function to get a URL query parameter
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
 }
 
-// JavaScript code to load Markdown file
-function loadMarkdown(file) {
-    fetch(file)
-    .then(response => {
-        console.log('Response status:', response.status);
-        return response.text();
-    })
-    .then(text => {
-        console.log('Markdown content:', text);
-        document.getElementById("article-content").innerHTML = marked(text);
-    })
-    .catch(error => console.error('Error loading markdown:', error));
+// Fetch and parse markdown files
+function loadMarkdownFiles(fileNames) {
+    fileNames.forEach(name => {
+        fetch(`contents/articles/${name}.md`)  // Use backticks for template literals
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${name}.md: ${response.statusText}`);  // Backticks for error message
+                }
+                return response.text();
+            })
+            .then(markdown => {
+                // Convert markdown to HTML using marked.js
+                const html = marked.parse(markdown);
+                // Dynamically create a div to display the markdown content
+                const markdownDiv = document.createElement('div');
+                markdownDiv.id = `${name}-md`;  // Backticks for setting the id
+                markdownDiv.innerHTML = html;
+                document.getElementById('article-content').appendChild(markdownDiv);
+            })
+            .then(() => {
+                // Process MathJax if needed
+                if (typeof MathJax !== 'undefined') {
+                    MathJax.typeset();
+                }
+            })
+            .catch(error => console.error('Error loading markdown:', error));
+    });
 }
 
+// Get the article file name from the URL query parameter
+const fileName = getQueryParam('file');
 
-// Get the article name from the URL query parameter
-const article = getQueryParam('file');
-
-// If an article is provided, load the corresponding markdown file
-if (article) {
-    loadMarkdown(`contents/articles/${article}`);
+// Load and parse the markdown file(s) if the file name is provided
+if (fileName) {
+    // Split file names by comma if multiple files are given
+    const sectionNames = fileName.split(',').map(name => name.trim());
+    loadMarkdownFiles(sectionNames);
 } else {
-    document.getElementById("article-content").innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
+    document.getElementById('article-content').innerHTML = "<p>No article specified. Please provide an article in the URL.</p>";
 }
