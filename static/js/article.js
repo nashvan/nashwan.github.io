@@ -10,7 +10,7 @@ function getQueryParam(param) {
 // Fetch and parse markdown files
 function loadMarkdownFiles(fileNames) {
     fileNames.forEach(name => {
-        fetch(`contents/articles/${name}.md`)  // Use backticks for template literals
+        fetch(`contents/articles/${name}`)  // Use backticks for template literals
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Failed to load ${name}.md: ${response.statusText}`);  // Backticks for error message
