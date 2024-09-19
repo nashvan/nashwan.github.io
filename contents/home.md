@@ -29,13 +29,6 @@ A Senior Platform Engineer with extensive 13 years of experience working in ITIL
 - Automated Testing: Integrated automated testing at various stages, including unit tests, integration tests, and security scans, to catch issues early in the development cycle. Implemented static code analysis tools to enforce coding standards and detect potential vulnerabilities
 - Identify and implement automation opportunities to reduce operational toil by using Helm charts as OCI (Open Container Initiative) images, pushing them to (ECR), and guiding a team to adopt and deliver the required uplift.
 
-#### Email
-Nashwan@techie.com
-
-#### Education
-- 2004-2007, BSc. Computer Science, Salahaddin University- Erbil, Kurdistan.
-- 2013-2015, Double Degree Master of Information Technology, Networks and Network Management, School of Engineering and Science, Queensland University of Technology, Birsbane, Australia.
-
 #### Professional Certifications
 - Certified Kubernetes Application Developer (CKAD)
 - AWS Security Speciality
@@ -46,10 +39,3 @@ Nashwan@techie.com
 - ITIL
 - CCNA Routing and Switching
 - PRINCE2® - Project Management certificate
-
-#### Research Intersts
-Deep Learning, Artificial Intelligence, Cyber Security both offensive and defensive technologies.
-
-
-#### Support or Contact
-Having trouble with Pages? [contact support](https://nbmustafa.github.io/contact) and we’ll help you sort it out.
