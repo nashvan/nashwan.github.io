@@ -1,10 +1,10 @@
-# A simple Github Pages for academic personal website.
+# A simple Github Pages for Professional and Academic personal website.
 
 [![Screenshot of the Website](https://nbmustafa.github.io/)
 
 ## Introduction
 
-This is an academic personal website template based on bootstrap.
+This is an professional personal website template based on bootstrap.
 
 This template supports markdown files as input content, and you don't need to build the webpage before deployment. When the webpage is loaded, the markdown files will be automatically parsed and embedded into the page.
 
