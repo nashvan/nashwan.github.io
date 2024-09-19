@@ -132,3 +132,9 @@ section .main-body{
 .page-top-title {
     border-bottom: 2px solid red;
 } */
+
+.center-content {
+    font-size: 1.1rem;
+    font-weight: 200;
+    line-height: 2.4rem;       /* Centers text horizontally */
+}
