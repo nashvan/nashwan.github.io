@@ -18,7 +18,7 @@ A Senior Platform Engineer with extensive more than 13 years of experience worki
 - Cloud and K8S Security: Istio Service Mesh, AWS SCP, AWS Network FW, NACLs, AWS SG, K8S netpolicy, Gatekeeper, Calico Global Network Policy for K8S.
 - Cloud and K8S Network: VPC, Sbnets, TGW, TGW peering, AWS Direct Connect, Routing table, ALB, NLB, K8s services, Istio, Nginx Ingress. 
 
-#### Some Recent Milestone projects and Accomplishments
+#### Some Recent Projects and Accomplishments
 - AWS cloud platform region enabelment 
 - EKS platform region enabelment
 - Replatform and streamline the DevOps environment, and uplifting platform automation level. 
