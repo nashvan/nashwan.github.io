@@ -29,7 +29,7 @@ Ambient Mesh prioritizes security:
 - Resource Efficiency: Ambient Mesh’s ztunnel reduces the per-workload reservations. Dynamic scaling of waypoint proxies also ensures resource optimization.
 - Latency Concerns: While there’s a perception that waypoint proxies might introduce latency, Istio believes this is balanced out by reduced L7 processing compared to the traditional sidecar model.
 
-# How Istio Ambient Mode reduce cloud cost
+# How Does Istio Ambient Mode Reduce Cloud Cost
 
 Istio Ambient Mode reduces cloud costs in several ways, specifically by eliminating the need for sidecar proxies in its architecture. When it comes to processing logs, particularly sidecar logs being sent to services like AWS CloudWatch, the impact can be significant. Here's how it works and why it matters:
 
