@@ -10,13 +10,13 @@ Istio's Ambient Mode reduces cloud costs by simplifying the architecture and rem
 # How Does Ambient Mesh Work?
 - A shared agent (ztunnel) is present on each node in the Kubernetes cluster, responsible for secure connections within the mesh.
 
-<img width="50%" align="centre" alt="Github" src="images/ambient-2.gif" />
+<img width="50%" align="centre" alt="Github" src="./contents/articles/images/ambient-2.gif" />
 
 - Ztunnel processes only L4 traffic, separating Istio’s data plane from application concerns.
 - A zero-trust overlay (with mTLS, telemetry, authentication, and L4 authorization) is established when the ambient mode is activated for a namespace.
 - For L7 features, a namespace can deploy one or more Envoy-based waypoint proxies. These proxies can be auto-scaled according to real-time traffic demand.
 
-<img width="50%" align="centre" alt="Github" src="images/ambient-2.gif" />
+<img width="50%" align="centre" alt="Github" src="./contents/articles/images/ambient-2.gif" />
 
 # Security Considerations
 Ambient Mesh prioritizes security:
