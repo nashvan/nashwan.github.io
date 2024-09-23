@@ -1,7 +1,7 @@
 To allow traffic on custom port 8443 to EKS cluster via an NLB to the Istio Ingress Gateway and all the way to the pods, while considering the Gatekeeper policy only allows the Istio Gateway configurarion on port 443, you can follow these steps:
 
 1. **Modify the Istio Ingress Gateway Configuration**:
-   - Update the Istio Ingress Gateway to expose port 8443. You can do this by modifying the IstioOperator resource to include the new port.
+   Update the Istio Ingress Gateway to expose port 8443. You can do this by modifying the IstioOperator resource to include the new port.
 
    ```yaml
    apiVersion: install.istio.io/v1alpha1
@@ -29,7 +29,7 @@ To allow traffic on custom port 8443 to EKS cluster via an NLB to the Istio Ingr
    ```
 
 2. **Update the Gateway Resource**:
-   - Configure the Gateway resource to listen on port 8443.
+   Configure the Gateway resource to listen on port 8443.
 
    ```yaml
    apiVersion: networking.istio.io/v1alpha3
@@ -62,7 +62,7 @@ To allow traffic on custom port 8443 to EKS cluster via an NLB to the Istio Ingr
    ```
 
 3. **Create or Update the VirtualService**:
-   - Define a VirtualService to route traffic from port 8443 to the appropriate service.
+   Define a VirtualService to route traffic from port 8443 to the appropriate service.
 
    ```yaml
    apiVersion: networking.istio.io/v1alpha3
@@ -86,7 +86,7 @@ To allow traffic on custom port 8443 to EKS cluster via an NLB to the Istio Ingr
    ```
 
 4. **Adjust Gatekeeper Policies**:
-   - Ensure that Gatekeeper policies allow the Istio Ingress Gateway to use port 8443. You may need to update the ConstraintTemplate and Constraint to permit this.
+   Ensure that Gatekeeper policies allow the Istio Ingress Gateway to use port 8443. You may need to update the ConstraintTemplate and Constraint to permit this.
 
    ```yaml
    apiVersion: templates.gatekeeper.sh/v1beta1
@@ -110,7 +110,7 @@ To allow traffic on custom port 8443 to EKS cluster via an NLB to the Istio Ingr
    ```
 
 5. **Deploy and Verify**:
-   - Apply the updated configurations and verify that traffic on port 8443 is correctly routed to your pods.
+   Apply the updated configurations and verify that traffic on port 8443 is correctly routed to your pods.
 
 These steps should help you configure your EKS cluster to allow traffic on port 8443 while adhering to your Gatekeeper policies¹².
 
