@@ -1,4 +1,4 @@
-#### EKS Enabling Cross-account Access to Secrets Stored in AWS Secret Manager
+### EKS Enabling Cross-account Access to Secrets Stored in AWS Secret Manager
 
 ![Author Nashwan](https://img.shields.io/badge/Author-Nashwan%20Mustafa-orange.svg?style=flat-square)
 
