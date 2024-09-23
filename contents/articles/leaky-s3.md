@@ -1,4 +1,4 @@
-#### How to Protect Organisations AWS Environments from Accessing to Leaky Public s3 Buckets
+### How to Protect Organisations AWS Environments from Accessing to Leaky Public s3 Buckets
 
 ![Author Nashwan](https://img.shields.io/badge/Author-Nashwan%20Mustafa-orange.svg?style=flat-square)
 
