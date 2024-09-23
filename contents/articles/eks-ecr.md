@@ -68,7 +68,7 @@ Here is a high-level example of the steps:
    aws eks describe-cluster --name <cluster_name> --query "cluster.identity.oidc.issuer" --output text
    ```
 
-   - Use the output URL to create the identity provider.
+   Use the output URL to create the identity provider.
 
    ```sh
    aws iam create-open-id-connect-provider \
@@ -100,7 +100,7 @@ Step2: **Create an IAM Role for the Service Account**:
    }
    ```
 
-   - Attach the necessary policies to this role.
+   Attach the necessary policies to this role.
 
    ```sh
    aws iam create-role --role-name <role_name> --assume-role-policy-document file://trust-policy.json
@@ -108,7 +108,7 @@ Step2: **Create an IAM Role for the Service Account**:
    ```
 
 3. **Associate the IAM Role with a Kubernetes Service Account**:
-   - Create a Kubernetes service account and annotate it with the IAM role ARN.
+   Create a Kubernetes service account and annotate it with the IAM role ARN.
 
    ```yaml
    apiVersion: v1
@@ -120,7 +120,7 @@ Step2: **Create an IAM Role for the Service Account**:
        eks.amazonaws.com/role-arn: arn:aws:iam::<account_id>:role/<role_name>
    ```
 
-   - Apply this configuration to your EKS cluster.
+   Apply this configuration to your EKS cluster.
 
    ```sh
    kubectl apply -f service-account.yaml
@@ -129,7 +129,7 @@ Step2: **Create an IAM Role for the Service Account**:
 ### Step 4: Configure Pods to Assume the IAM Role
 
 1. **Deploy Pods Using the Service Account**:
-   - Ensure your pod specification uses the service account created in the previous step.
+   Ensure your pod specification uses the service account created in the previous step.
 
    ```yaml
    apiVersion: apps/v1
@@ -155,31 +155,23 @@ Step2: **Create an IAM Role for the Service Account**:
            - containerPort: 80
    ```
 
-   - Apply the deployment to your EKS cluster.
+   Apply the deployment to your EKS cluster.
 
    ```sh
    kubectl apply -f deployment.yaml
    ```
 
 2. **Verify the Pod Assumes the IAM Role**:
-   - Check the logs of your pod to ensure it has the necessary permissions to access the ECR repository.
+   Check the logs of your pod to ensure it has the necessary permissions to access the ECR repository.
 
    ```sh
    kubectl logs <pod_name>
    ```
 
-By following these steps, your EKS pods should be able to assume the IAM role and access the ECR repository in the target account. If you encounter any issues or need further assistance, feel free to ask!
+By following these steps, your EKS pods should be able to assume the IAM role and access the ECR repository in the target account.
 
-Source: Conversation with Copilot, 9/23/2024
-(1) Enabling cross-account access to Amazon EKS cluster resources. https://aws.amazon.com/blogs/containers/enabling-cross-account-access-to-amazon-eks-cluster-resources/.
-(2) Authenticate to another account with IRSA - Amazon EKS. https://docs.aws.amazon.com/eks/latest/userguide/cross-account-access.html.
-(3) Enabling cross-account access to Amazon EKS cluster resources. https://bing.com/search?q=enabling+cross-account+access+to+Amazon+EKS+cluster+resources.
-(4) Provide access to other IAM users and roles after cluster creation in .... https://repost.aws/knowledge-center/amazon-eks-cluster-access.
-(5) Identity and access management for Amazon EKS. https://docs.amazonaws.cn/en_us/eks/latest/userguide/security-iam.html.
-(6) Configure an SSO user to access an Amazon EKS cluster. https://repost.aws/knowledge-center/eks-configure-sso-user.
 
 For detailed instructions, you can refer to the AWS documentation on [enabling cross-account access to Amazon EKS cluster resources](https://aws.amazon.com/blogs/containers/enabling-cross-account-access-to-amazon-eks-cluster-resources/)¹ and [sharing Amazon ECR repositories with multiple accounts](https://aws.amazon.com/blogs/containers/sharing-amazon-ecr-repositories-with-multiple-accounts-using-aws-organizations/)².
-
 
 
 Source:
