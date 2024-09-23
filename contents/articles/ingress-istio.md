@@ -1,4 +1,4 @@
-#### How to allow traffic on custom port 8443 other than just 443 to eks via nlb to istio ingress gateway. 
+### How to allow traffic on custom port 8443 other than just 443 to eks via nlb to istio ingress gateway. 
 
 ![Author Nashwan](https://img.shields.io/badge/Author-Nashwan%20Mustafa-orange.svg?style=flat-square)
 
