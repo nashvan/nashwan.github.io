@@ -1,4 +1,4 @@
-#### Istio Ambient Mode
+### Istio Ambient Mode
 
 ![Author Nashwan](https://img.shields.io/badge/Author-Nashwan%20Mustafa-orange.svg?style=flat-square)
 
