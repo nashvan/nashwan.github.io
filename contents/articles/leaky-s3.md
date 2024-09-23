@@ -17,6 +17,7 @@ Use IAM policies with Condition keys like aws:SourceVpce (for VPC endpoints) or 
 
 Example condition to deny access to public buckets:
 
+```json
 {
   "Effect": "Deny",
   "Action": "s3:GetObject",
@@ -27,8 +28,7 @@ Example condition to deny access to public buckets:
     }
   }
 }
-
-
+```
 
 2. Use VPC Endpoints for S3
 
@@ -36,6 +36,7 @@ Restrict S3 Traffic within VPC: Configure S3 VPC Endpoints to ensure that S3 acc
 
 VPC Endpoint Policy: Apply a restrictive VPC Endpoint Policy that allows access only to your organization's S3 buckets and denies access to external buckets. Example policy:
 
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -50,7 +51,7 @@ VPC Endpoint Policy: Apply a restrictive VPC Endpoint Policy that allows access 
     }
   ]
 }
-
+```
 
 3. Network Layer Protections
 
