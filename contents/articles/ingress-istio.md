@@ -114,7 +114,6 @@ To allow traffic on custom port 8443 to EKS cluster via an NLB to the Istio Ingr
 
 These steps should help you configure your EKS cluster to allow traffic on port 8443 while adhering to your Gatekeeper policies¹².
 
-If you have any specific issues or need further assistance, feel free to ask!
 
 Source: 
 (1) Istio / Ingress Sidecar TLS Termination. https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-sidecar-tls-termination/.
