@@ -1,5 +1,7 @@
 #### How to Protect Organisations AWS Environments from Accessing to Leaky Public s3 Buckets
 
+![Author Nashwan](https://img.shields.io/badge/Author-Nashwan%20Mustafa-orange.svg?style=flat-square)
+
 To protect organization’s AWS environment from accessing leaky, external, or malware-infected public S3 buckets, you can implement a combination of technical controls, monitoring, and security best practices. Here’s a comprehensive approach to mitigate the risks:
 
 1. Restrict Access to External Public S3 Buckets
