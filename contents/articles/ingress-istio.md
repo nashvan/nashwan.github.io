@@ -1,5 +1,7 @@
 #### How to allow traffic on custom port 8443 other than just 443 to eks via nlb to istio ingress gateway. 
 
+![Author Nashwan](https://img.shields.io/badge/Author-Nashwan%20Mustafa-orange.svg?style=flat-square)
+
 To allow traffic on custom port 8443 to EKS cluster via an NLB to the Istio Ingress Gateway and all the way to the pods, while considering the Gatekeeper policy only allows the Istio Gateway configurarion on port 443, you can follow these steps:
 
 1. **Modify the Istio Ingress Gateway Configuration**:
