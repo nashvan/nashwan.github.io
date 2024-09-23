@@ -1,4 +1,7 @@
-# Istio Ambient Mode
+#### Istio Ambient Mode
+
+![Author Nashwan](https://img.shields.io/badge/Author-Nashwan%20Mustafa-orange.svg?style=flat-square)
+
 Istio Ambient Mode offers an alternative deployment architecture that eliminates the need for sidecar proxies by using a "split proxy" model. Instead of injecting a proxy into every application pod, traffic is managed by external Layer 4 (Ztunnel) and Layer 7 (Waypoints) proxies. This approach reduces resource consumption, simplifies deployments, and improves operational efficiency by avoiding the complexity of maintaining sidecars.
 
 However, there are tradeoffs. Ambient Mode may limit the granularity and flexibility offered by sidecar-based Istio, where traffic management and security can be fine-tuned at a per-pod level. It also operates on a newer, less mature architecture, meaning some features are still evolving compared to the established sidecar model.
