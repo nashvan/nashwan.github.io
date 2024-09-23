@@ -2,6 +2,8 @@
 
 ![Author Nashwan Mustafa](https://img.shields.io/badge/Author-Nashwan-brightgreen.svg?style=flat-square)
 
+![Author Nashwan Mustafa](https://img.shields.io/badge/Author-Nashwan%20Mustafa-orange.svg?style=flat-square)
+
 To enable cross-account access to AWS Secrets Manager secrets from an Amazon EKS cluster, you can follow these steps:
 
 ### Step-by-Step Guide
