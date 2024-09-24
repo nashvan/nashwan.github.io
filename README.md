@@ -1,8 +1,8 @@
-# A simple Github Pages for Professional and Academic personal website.
+## A simple Github Pages for Professional and Academic personal website.
 
 [![Screenshot of the Website](https://nbmustafa.github.io/)
 
-## Introduction
+### Introduction
 
 This is an professional personal website template based on bootstrap.
 
@@ -11,12 +11,12 @@ This template supports markdown files as input content, and you don't need to bu
 Demo: https://nbmustafa.github.io/
 
 
-## Getting Start
-### 1. Fork this repository
+### Getting Start
+#### 1. Fork this repository
 The repository name should be `<username>.github.io`, which will also be your website's URL.
 
 
-### 2. Edit page content
+#### 2. Edit page content
 
 (1) Go to the folder where you want to store your project, and clone the new repository:
 ```
@@ -47,12 +47,12 @@ git push
 ```
 
 
-### 3. Enjoy
+#### 3. Enjoy
 
 Fire up a browser and go to `https://<username>.github.io`
 
 
 
-## License
+### License
 
 Copyright 2024, Nashwan Mustafa and controlled via the MIT license, a permissive open-source (free software) license. You can copy and mess with this template.
