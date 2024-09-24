@@ -163,7 +163,7 @@ Here’s a complete example of how to set up Fluent Bit to ship logs from EKS to
 
 This setup ensures that logs from your EKS cluster are efficiently shipped to AWS CloudWatch Logs using Fluent Bit¹²³. If you have any questions or need further assistance, feel free to ask!
 
-Source: Conversation with Copilot, 9/24/2024
+Source:
 (1) Set up Fluent Bit as a DaemonSet to send logs to CloudWatch Logs. https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-logs-FluentBit.html.
 (2) Configure Fluent Bit for CloudWatch - EKS Anywhere. https://anywhere.eks.amazonaws.com/docs/clustermgmt/observability/fluentbit-logging/.
 (3) AWS For Fluent Bit - Amazon EKS Blueprints Quick Start - GitHub Pages. https://aws-quickstart.github.io/cdk-eks-blueprints/addons/aws-for-fluent-bit/.
