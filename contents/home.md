@@ -14,9 +14,9 @@ A Senior Platform Engineer with extensive 13 years of experience working in ITIL
 #### Technologies and toolings:
 - Cloud: AWS, GCP, Azure
 - Infrastructure Services: DNS, DHCP, Web, DB, Nginx, NAT, IDP/IPS, Proxy, NAT, Routers, Edge Firewalls
-- DevOps and GitOps: Kubernetes, GitHub, Docker, Terraform, Golang, Python, Bash, FluxCD, Jenkins, Codefrehs
+- DevOps and GitOps: Kubernetes, GitHub, Docker, Terraform, Golang, Python, Bash, FluxCD, Jenkins, Codefresh
 - Cloud and K8S Security: Istio Service Mesh, AWS SCP, AWS Network FW, NACLs, AWS SG, K8S netpolicy, Gatekeeper, Calico Global Network Policy for K8S.
-- Cloud and K8S Network: VPC, Sbnets, TGW, TGW peering, AWS Direct Connect, Routing table, ALB, NLB, K8s services, Istio, Nginx Ingress. 
+- Cloud and K8S Network: VPC, Subnets, TGW, TGW peering, AWS Direct Connect, Routing table, ALB, NLB, K8s services, Istio, Nginx Ingress. 
 
 #### Some Recent Projects and Accomplishments
 - AWS cloud platform region enabelment 
